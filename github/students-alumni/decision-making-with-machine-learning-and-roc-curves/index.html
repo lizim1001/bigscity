@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/decision-making-with-machine-learning-and-roc-curves/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:18:01 GMT -->
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="anonymous" href="https://u.jimcdn.com/" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../assets.jimstatic.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../image.jimcdn.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.jimstatic.com/" rel="dns-prefetch preconnect"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="index, follow, archive" name="robots"/>
+<meta content="" property="st:section"/>
+<meta content="Jimdo Creator" name="generator"/>
+<meta content="Decision Making with Machine Learning and ROC Curves" name="twitter:title"/>
+<meta content="K. Feng, H. Hong, K. Tang, and J. Wang Available at SSRN 3382962, 2019" name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index.html" property="og:url"/>
+<meta content="Decision Making with Machine Learning and ROC Curves" property="og:title"/>
+<meta content="K. Feng, H. Hong, K. Tang, and J. Wang Available at SSRN 3382962, 2019" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Beihang Interest Group on SmartCity (BIGSCity)" property="og:site_name"/><title>Decision Making with Machine Learning and ROC Curves - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link href="../../../assets.jimstatic.com/s/img/favicon.ico" rel="shortcut icon"/>
+<link href="../../rss/blog" rel="alternate" title="Blog" type="application/rss+xml"/>
+<link href="index.html" rel="canonical"/>
+<style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+<link as="style" href="../../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload"/>
+<noscript>
+</noscript>
+<link href="../../assets/css/web_oldtemplate.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/layout.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/font.css" rel="stylesheet" type="text/css"/><script src="../../assets/js/config.js"></script><script src="../../assets/js/nav_toggle.js"></script></head>
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-2222458812">
+<div class="cc-content-parent" id="cc-inner"> <div class="cc-content-parent" id="tp-container">
+<div id="tp-sidebar-wrapper">
+<div id="tp-emotion">
+<div data-action="emoHeader" id="emotion-header" style="background: #FFFFFF;width: 200px; height: 198px;">
+<a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+<img alt="" id="emotion-header-img" src="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941"/>
+<strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+</a>
+</div>
+</div>
+<div id="tp-navigation-wrapper">
+<div data-container="navigation">
+<div class="j-nav-variant-standard">
+<ul class="mainNav1" id="mainNav1">
+<!-- Active Main Sections -->
+<li class="nav-item"><a class="level_1" href="../../index.html"><span>Home</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../jingyuan-wang/index.html"><span>Jingyuan Wang</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../publications/index.html"><span>Publications</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../students-alumni/index.html"><span>Students &amp; Alumni</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../libcity/index.html"><span>LibCity</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../visualizations/index.html"><span>Visualizations</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../seminars/index.html"><span>Seminars</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../seminars/2024/index.html"><span>2024</span></a></li>
+<li><a class="level_2" href="../../seminars/2023-1/index.html"><span>2023</span></a></li>
+<li><a class="level_2" href="../../seminars/2022-1/index.html"><span>2022</span></a></li>
+<li><a class="level_2" href="../../seminars/files/index.html"><span>files (Slides)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../readings/index.html"><span>Readings</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../readings/special-issues/index.html"><span>Special Issues</span></a></li>
+<li><a class="level_2" href="../../readings/sp1/index.html"><span>SP1 (Survey)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../contact-us/index.html"><span>Contact Us</span></a></li>
+<!-- Archived / Deprecated Sections (Hidden by default, controlled by Switch) -->
+<li class="nav-item nav-archived-section" style="display:none; border-top: 1px dashed #c7e4ff; margin-top: 6px;">
+<span style="display:block; padding: 6px 15px 2px 15px; font-size: 11px; color: #888; font-weight: bold; text-transform: uppercase;">-- Archived / 历史归档 --</span>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../application-fields/index.html"><span>Application Fields</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../interpretable-ml/index.html"><span>Interpretable ML</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../interpretable-ml/svm-based-deep-net-1/index.html"><span>SVM-based Deep Net</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/traffic-prediction/index.html"><span>Traffic Prediction</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/wavelet-deep-net/index.html"><span>Wavelet Deep Net</span></a></li>
+</ul>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../maps/index.html"><span>Maps</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../knowledge-fusion/index.html"><span>Knowledge Fusion</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../st-pattern-mining/index.html"><span>ST Pattern Mining</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../tcp-fit-family/index.html"><span>TCP-FIT Family</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../veccity/index.html"><span>VecCity</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../special-issues/urban-computing/index.html"><span>Urban Computing (FCS)</span></a></li>
+</ul>
+</div>
+<!-- Interactive Switcher -->
+<div class="archive-toggle-box" style="margin: 20px 15px; padding: 10px 12px; background: rgba(16, 114, 204, 0.06); border: 1px solid rgba(16, 114, 204, 0.25); border-radius: 6px; font-size: 12px;">
+<label style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin: 0; font-weight: bold; color: #1072CC;">
+<span>🗂️ 归档/历史栏目</span>
+<input id="toggle-archive-nav" onchange="toggleArchiveNav(this.checked)" style="cursor: pointer;" type="checkbox"/>
+</label>
+<div style="font-size: 11px; color: #666; margin-top: 4px; line-height: 1.3;">开启以展开前期迭代的分类与专题页面</div>
+</div>
+</div>
+</div>
+<div id="tp-sidebar">
+<div data-container="sidebar"><div id="cc-matrix-1765328887"><div class="j-module n j-htmlCode" id="cc-m-7369283887"></div><div class="j-module n j-hgrid" id="cc-m-11752886712"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3232397312"><div class="j-module n j-text" id="cc-m-11752886812"><p>
+    Current Visitors:
+</p></div></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3232397412"><div class="j-module n j-htmlCode" id="cc-m-11752887012"><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<noscript>
+</noscript> <!-- End of Statcounter Code --></div></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div></div></div>
+</div>
+</div>
+<div class="cc-content-parent" id="tp-content-wrapper">
+<div data-container="content" id="content_area"><div id="content_start"></div>
+<div id="cc-matrix-3273363712"><div class="j-module n j-header" id="cc-m-11984899912"><a name="11984899912"></a>
+<h1 class="" id="cc-m-header-11984899912">Decision Making with
+Machine Learning and ROC Curves</h1></div><div class="j-module n j-text" id="cc-m-11984900012"><p style="text-align: justify;">
+<span lang="EN-US" style="font-size: 18px; font-family: 'Times New Roman', serif;" xml:lang="EN-US">K. Feng, H. Hong, K. Tang, and <strong>J. Wang</strong></span>
+</p>
+<p style="text-align: justify;">
+<span lang="EN-US" style="font-size: 18px; font-family: 'Times New Roman', serif;" xml:lang="EN-US"><strong><i>Available at SSRN 3382962,</i></strong> <i>2019</i></span>
+</p></div><div class="j-module n j-hr" id="cc-m-11984900112"> <div class="hr"></div>
+</div><div class="j-module n j-textWithImage" id="cc-m-12090831612"><figure class="cc-imagewrapper cc-m-image-align-1">
+<img alt="" class="" data-image-id="8103060812" data-src="https://image.jimcdn.com/app/cms/image/transf/dimension=375x1024:format=png/path/saf8fe3b8eb300165/image/i0a199e468afefbec/version/1603190020/image.png" data-src-height="417" data-src-width="535" id="cc-m-textwithimage-image-12090831612" sizes="(min-width: 375px) 375px, 100vw" src="../../image.jimcdn.com/app/cms/image/transf/dimension%3d375x1024_format%3dpng/path/saf8fe3b8eb300165/image/i0a199e468afefbec/version/1603190020/image.png"/>
+</figure>
+<div>
+<div class="cc-m-textwithimage-inline-rte" data-action="text" data-name="text" id="cc-m-textwithimage-12090831612">
+<p style="text-align: justify;">
+<span style="font-size: 16px; text-align: justify;">The Receiver Operating Characteristic (ROC) curve is a representation of the statistical information discovered in binary classification
+    problems and is a key concept in machine learning and data science. This paper studies the statistical properties of ROC curves and its implication on model selection. We analyze the implications
+    of different models of incentive heterogeneity and information asymmetry on the relation between human decisions and the ROC curves. Our theoretical discussion is illustrated in the context of a
+    large data set of pregnancy outcomes and doctor diagnosis from the Pre-Pregnancy Checkups of reproductive age couples in Henan Province provided by the Chinese Ministry of Health.</span>
+</p> </div>
+</div>
+<div class="cc-clear"></div>
+</div><div class="j-module n j-hr" id="cc-m-11984900412"> <div class="hr"></div>
+</div><div class="j-module n j-downloadDocument" id="cc-m-12090832112"><div class="clearover">
+<div class="leftDownload">
+<a class="j-m-dowload" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1604333500/module/12090832112/name/feng2019decision.pdf"> <img alt="Download" class="downloadImage" height="51" src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51"/>
+</a>
+</div>
+<div class="rightDownload" data-name="download-description">
+<div class="cc-m-download-title">Decision Making with Machine Learning and ROC Curves</div>
+<div class="cc-m-download-file">
+<div class="cc-m-download-file-name">feng2019decision.pdf</div>
+<div class="cc-m-download-file-info">
+<span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+<span class="cc-m-download-file-size">7.1 MB</span>
+</div>
+<div class="cc-m-download-file-link"><a class="cc-m-download-link" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1604333500/module/12090832112/name/feng2019decision.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</div><div class="j-module n j-downloadDocument" id="cc-m-12094766912"><div class="clearover">
+<div class="leftDownload">
+<a class="j-m-dowload" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1604333520/module/12094766912/name/feng-slideDec2019brief.pdf"> <img alt="Download" class="downloadImage" height="51" src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51"/>
+</a>
+</div>
+<div class="rightDownload" data-name="download-description">
+<div class="cc-m-download-title">feng-slideDec2019brief</div>
+<div class="cc-m-download-file">
+<div class="cc-m-download-file-name">feng-slideDec2019brief.pdf</div>
+<div class="cc-m-download-file-info">
+<span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+<span class="cc-m-download-file-size">11.4 MB</span>
+</div>
+<div class="cc-m-download-file-link"><a class="cc-m-download-link" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1604333520/module/12094766912/name/feng-slideDec2019brief.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</div><div class="j-module n j-hr" id="cc-m-12090832412"> <div class="hr"></div>
+</div><div class="j-module n j-text" id="cc-m-12090832312"><p>
+    @article{feng2019decision,
+</p>
+<p>
+      title={Decision Making with Machine Learning and ROC Curves},
+</p>
+<p>
+      author={Feng, Kai and Hong, Han and Tang, Ke and Wang, Jingyuan},
+</p>
+<p>
+      journal={Available at SSRN 3382962},
+</p>
+<p>
+      year={2019}
+</p>
+<p>
+    }
+</p></div></div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="tp-footer">
+<div data-container="footer" id="contentfooter">
+<div class="leftrow">
+</div>
+<div class="rightrow">
+<span class="loggedout">
+<a href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165" id="login" rel="nofollow">Log in</a>
+</span>
+<span class="loggedin">
+<a href="https://cms.e.jimdo.com/app/cms/logout.php" id="logout" rel="nofollow" target="_top">
+        Log out    </a>
+    |
+    <a href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=2222458812" id="edit" rel="nofollow" target="_top">Edit</a>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+<!-- scroll to top button -->
+<li class="cc-FloatingButtonBarContainer-button-scroll">
+<a href="javascript:void(0);" title="Scroll to top">
+<span>Scroll to top</span>
+</a>
+</li>
+</ul>
+<div class="hidden" id="loginbox">
+<div id="loginbox-header">
+<a class="cc-close" href="#" title="Close this element">Close</a>
+<div class="c"></div>
+</div>
+<div id="loginbox-content">
+<div id="resendpw"></div>
+<div id="loginboxOuter"></div>
+</div>
+</div>
+<div class="hidden" id="loginbox-darklayer"></div>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+</body>
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/decision-making-with-machine-learning-and-roc-curves/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:18:03 GMT -->
+</html>

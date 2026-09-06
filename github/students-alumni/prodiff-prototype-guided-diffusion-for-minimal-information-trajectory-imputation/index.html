@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/prodiff-prototype-guided-diffusion-for-minimal-information-trajectory-imputation/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:15:13 GMT -->
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="anonymous" href="https://u.jimcdn.com/" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../assets.jimstatic.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../image.jimcdn.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.jimstatic.com/" rel="dns-prefetch preconnect"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="index, follow, archive" name="robots"/>
+<meta content="" property="st:section"/>
+<meta content="Jimdo Creator" name="generator"/>
+<meta content="ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation" name="twitter:title"/>
+<meta content="T. Bu, L. Zhou, W. Yang, J. Mou, K. Yang, S. Tan, F. Yao, J. Wang, and X. Lu in Proceedings of the Forty-Second International Conference on Machine Learning (ICML'25)" name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index.html" property="og:url"/>
+<meta content="ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation" property="og:title"/>
+<meta content="T. Bu, L. Zhou, W. Yang, J. Mou, K. Yang, S. Tan, F. Yao, J. Wang, and X. Lu in Proceedings of the Forty-Second International Conference on Machine Learning (ICML'25)" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Beihang Interest Group on SmartCity (BIGSCity)" property="og:site_name"/><title>ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link href="../../../assets.jimstatic.com/s/img/favicon.ico" rel="shortcut icon"/>
+<link href="../../rss/blog" rel="alternate" title="Blog" type="application/rss+xml"/>
+<link href="index.html" rel="canonical"/>
+<style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+<link as="style" href="../../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload"/>
+<noscript>
+</noscript>
+<link href="../../assets/css/web_oldtemplate.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/layout.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/font.css" rel="stylesheet" type="text/css"/><script src="../../assets/js/config.js"></script><script src="../../assets/js/nav_toggle.js"></script></head>
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-2291784312">
+<div class="cc-content-parent" id="cc-inner"> <div class="cc-content-parent" id="tp-container">
+<div id="tp-sidebar-wrapper">
+<div id="tp-emotion">
+<div data-action="emoHeader" id="emotion-header" style="background: #FFFFFF;width: 200px; height: 198px;">
+<a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+<img alt="" id="emotion-header-img" src="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941"/>
+<strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+</a>
+</div>
+</div>
+<div id="tp-navigation-wrapper">
+<div data-container="navigation">
+<div class="j-nav-variant-standard">
+<ul class="mainNav1" id="mainNav1">
+<!-- Active Main Sections -->
+<li class="nav-item"><a class="level_1" href="../../index.html"><span>Home</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../jingyuan-wang/index.html"><span>Jingyuan Wang</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../publications/index.html"><span>Publications</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../students-alumni/index.html"><span>Students &amp; Alumni</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../libcity/index.html"><span>LibCity</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../visualizations/index.html"><span>Visualizations</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../seminars/index.html"><span>Seminars</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../seminars/2024/index.html"><span>2024</span></a></li>
+<li><a class="level_2" href="../../seminars/2023-1/index.html"><span>2023</span></a></li>
+<li><a class="level_2" href="../../seminars/2022-1/index.html"><span>2022</span></a></li>
+<li><a class="level_2" href="../../seminars/files/index.html"><span>files (Slides)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../readings/index.html"><span>Readings</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../readings/special-issues/index.html"><span>Special Issues</span></a></li>
+<li><a class="level_2" href="../../readings/sp1/index.html"><span>SP1 (Survey)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../contact-us/index.html"><span>Contact Us</span></a></li>
+<!-- Archived / Deprecated Sections (Hidden by default, controlled by Switch) -->
+<li class="nav-item nav-archived-section" style="display:none; border-top: 1px dashed #c7e4ff; margin-top: 6px;">
+<span style="display:block; padding: 6px 15px 2px 15px; font-size: 11px; color: #888; font-weight: bold; text-transform: uppercase;">-- Archived / 历史归档 --</span>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../application-fields/index.html"><span>Application Fields</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../interpretable-ml/index.html"><span>Interpretable ML</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../interpretable-ml/svm-based-deep-net-1/index.html"><span>SVM-based Deep Net</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/traffic-prediction/index.html"><span>Traffic Prediction</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/wavelet-deep-net/index.html"><span>Wavelet Deep Net</span></a></li>
+</ul>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../maps/index.html"><span>Maps</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../knowledge-fusion/index.html"><span>Knowledge Fusion</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../st-pattern-mining/index.html"><span>ST Pattern Mining</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../tcp-fit-family/index.html"><span>TCP-FIT Family</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../veccity/index.html"><span>VecCity</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../special-issues/urban-computing/index.html"><span>Urban Computing (FCS)</span></a></li>
+</ul>
+</div>
+<!-- Interactive Switcher -->
+<div class="archive-toggle-box" style="margin: 20px 15px; padding: 10px 12px; background: rgba(16, 114, 204, 0.06); border: 1px solid rgba(16, 114, 204, 0.25); border-radius: 6px; font-size: 12px;">
+<label style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin: 0; font-weight: bold; color: #1072CC;">
+<span>🗂️ 归档/历史栏目</span>
+<input id="toggle-archive-nav" onchange="toggleArchiveNav(this.checked)" style="cursor: pointer;" type="checkbox"/>
+</label>
+<div style="font-size: 11px; color: #666; margin-top: 4px; line-height: 1.3;">开启以展开前期迭代的分类与专题页面</div>
+</div>
+</div>
+</div>
+<div id="tp-sidebar">
+<div data-container="sidebar"><div id="cc-matrix-1765328887"><div class="j-module n j-htmlCode" id="cc-m-7369283887"></div><div class="j-module n j-hgrid" id="cc-m-11752886712"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3232397312"><div class="j-module n j-text" id="cc-m-11752886812"><p>
+    Current Visitors:
+</p></div></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3232397412"><div class="j-module n j-htmlCode" id="cc-m-11752887012"><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<noscript>
+</noscript> <!-- End of Statcounter Code --></div></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div></div></div>
+</div>
+</div>
+<div class="cc-content-parent" id="tp-content-wrapper">
+<div data-container="content" id="content_area"><div id="content_start"></div>
+<div id="cc-matrix-3527038412"><div class="j-module n j-header" id="cc-m-12902727512"><a name="12902727512"></a>
+<h1 class="" id="cc-m-header-12902727512">ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation</h1></div><div class="j-module n j-text" id="cc-m-12902727612"><p>
+<span face="Times New Roman, serif" style="font-family: 'Times New Roman', serif;"><span style="font-size: 18px;">T. Bu, L. Zhou, W. Yang, J. Mou, K. Yang, S. Tan, F. Yao, <strong>J.
+    Wang</strong>, and X. Lu</span></span>
+</p>
+<p>
+<span face="Times New Roman, serif" style="font-family: 'Times New Roman', serif;"><span style="font-size: 18px;"><em>in Proceedings of the Forty-Second International Conference on Machine
+    Learning (<strong>ICML'25</strong>)</em></span></span>
+</p></div><div class="j-module n j-hr" id="cc-m-12902727712"> <div class="hr"></div>
+</div><div class="j-module n j-hgrid" id="cc-m-12902727812"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3527038512"></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3527038612"></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div><div class="j-module n j-textWithImage" id="cc-m-12902727912"><figure class="cc-imagewrapper cc-m-image-align-1">
+<img alt="" class="" data-image-id="8619185012" data-src="https://image.jimcdn.com/app/cms/image/transf/dimension=417x1024:format=png/path/saf8fe3b8eb300165/image/i975f9575b16e05a5/version/1758249533/image.png" data-src-height="344" data-src-width="938" id="cc-m-textwithimage-image-12902727912" sizes="(min-width: 417px) 417px, 100vw" src="../../image.jimcdn.com/app/cms/image/transf/dimension%3d417x1024_format%3dpng/path/saf8fe3b8eb300165/image/i975f9575b16e05a5/version/1758249533/image.png"/>
+</figure>
+<div>
+<div class="cc-m-textwithimage-inline-rte" data-action="text" data-name="text" id="cc-m-textwithimage-12902727912">
+<p style="text-align: justify;">
+<span style="font-size: 16px; text-align: justify;">Trajectory data is crucial for various applications but often suffers from incompleteness due to device limitations and diverse collection
+    scenarios. Existing imputation methods rely on sparse trajectory or travel information, such as velocity, to infer missing points. However, these approaches assume that sparse trajectories retain
+    essential behavioral patterns, which place significant demands on data acquisition and overlook the potential of large-scale human trajectory embeddings. To address this, we propose ProDiff, a
+    trajectory imputation framework that uses only two endpoints as minimal information. It integrates prototype learning to embed human movement patterns and a denoising diffusion probabilistic
+    model for robust spatiotemporal reconstruction. Joint training with a tailored loss function ensures effective imputation. ProDiff outperforms stateof- the-art methods, improving accuracy by
+    6.28% on FourSquare and 2.52% on WuXi. Further analysis shows a 0.927 correlation between generated and real trajectories, demonstrating the effectiveness of our approach.</span>
+</p> </div>
+</div>
+<div class="cc-clear"></div>
+</div><div class="j-module n j-hr" id="cc-m-12902728012"> <div class="hr"></div>
+</div><div class="j-module n j-downloadDocument" id="cc-m-12902728112"><div class="clearover">
+<div class="leftDownload">
+<a class="j-m-dowload" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1758249404/module/12902728112/name/ProDiff-%20Prototype-Guided%20Diffusion%20for%20Minimal%20Information%20Trajectory%20Imputation.pdf"> <img alt="Download" class="downloadImage" height="51" src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51"/>
+</a>
+</div>
+<div class="rightDownload" data-name="download-description">
+<div class="cc-m-download-title">ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation</div>
+<div class="cc-m-download-file">
+<div class="cc-m-download-file-name">ProDiff- Prototype-Guided Diffusion for </div>
+<div class="cc-m-download-file-info">
+<span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+<span class="cc-m-download-file-size">1.9 MB</span>
+</div>
+<div class="cc-m-download-file-link"><a class="cc-m-download-link" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1758249404/module/12902728112/name/ProDiff-%20Prototype-Guided%20Diffusion%20for%20Minimal%20Information%20Trajectory%20Imputation.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</div><div class="j-module n j-hr" id="cc-m-12902728212"> <div class="hr"></div>
+</div><div class="j-module n j-text" id="cc-m-12902728312"><p>
+     
+</p>
+<p>
+    @article{bu2025prodiff,
+</p>
+<p>
+    title={ProDiff: Prototype-Guided Diffusion for Minimal Information Trajectory Imputation},
+</p>
+<p>
+    author={Bu, Tianci and Zhou, Le and Yang, Wenchuan and Mou, Jianhong and Yang, Kang and Tan, Suoyi and Yao, Feng and Wang, Jingyuan and Lu, Xin},
+</p>
+<p style="line-height: 19.6px;">
+    booktitle={Forty-second International Conference on Machine Learning},
+</p>
+<p>
+    year={2025}
+</p>
+<p>
+    }
+</p></div></div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="tp-footer">
+<div data-container="footer" id="contentfooter">
+<div class="leftrow">
+</div>
+<div class="rightrow">
+<span class="loggedout">
+<a href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165" id="login" rel="nofollow">Log in</a>
+</span>
+<span class="loggedin">
+<a href="https://cms.e.jimdo.com/app/cms/logout.php" id="logout" rel="nofollow" target="_top">
+        Log out    </a>
+    |
+    <a href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=2291784312" id="edit" rel="nofollow" target="_top">Edit</a>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+<!-- scroll to top button -->
+<li class="cc-FloatingButtonBarContainer-button-scroll">
+<a href="javascript:void(0);" title="Scroll to top">
+<span>Scroll to top</span>
+</a>
+</li>
+</ul>
+<div class="hidden" id="loginbox">
+<div id="loginbox-header">
+<a class="cc-close" href="#" title="Close this element">Close</a>
+<div class="c"></div>
+</div>
+<div id="loginbox-content">
+<div id="resendpw"></div>
+<div id="loginboxOuter"></div>
+</div>
+</div>
+<div class="hidden" id="loginbox-darklayer"></div>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+</body>
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/prodiff-prototype-guided-diffusion-for-minimal-information-trajectory-imputation/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:15:15 GMT -->
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/seeing-the-unseen-learning-basis-confounder-representations-for-robust-traffic-prediction/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:15:21 GMT -->
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="anonymous" href="https://u.jimcdn.com/" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../assets.jimstatic.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../../image.jimcdn.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.jimstatic.com/" rel="dns-prefetch preconnect"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="index, follow, archive" name="robots"/>
+<meta content="" property="st:section"/>
+<meta content="Jimdo Creator" name="generator"/>
+<meta content="Seeing the Unseen: Learning Basis Confounder Representationsfor Robust Traffic Prediction" name="twitter:title"/>
+<meta content="J. Ji, W. Zhang, J. Wang, and C. Huang in Proceedings of the 31th ACM SIGKDD International Conference on Knowledge Discovery &amp;amp; Data Mining (KDD'25)" name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index.html" property="og:url"/>
+<meta content="Seeing the Unseen: Learning Basis Confounder Representationsfor Robust Traffic Prediction" property="og:title"/>
+<meta content="J. Ji, W. Zhang, J. Wang, and C. Huang in Proceedings of the 31th ACM SIGKDD International Conference on Knowledge Discovery &amp;amp; Data Mining (KDD'25)" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Beihang Interest Group on SmartCity (BIGSCity)" property="og:site_name"/><title>Seeing the Unseen: Learning Basis Confounder Representationsfor Robust Traffic Prediction - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link href="../../../assets.jimstatic.com/s/img/favicon.ico" rel="shortcut icon"/>
+<link href="../../rss/blog" rel="alternate" title="Blog" type="application/rss+xml"/>
+<link href="index.html" rel="canonical"/>
+<style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+<link as="style" href="../../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload"/>
+<noscript>
+</noscript>
+<link href="../../assets/css/web_oldtemplate.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/layout.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/font.css" rel="stylesheet" type="text/css"/><script src="../../assets/js/config.js"></script><script src="../../assets/js/nav_toggle.js"></script></head>
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-2285318112">
+<div class="cc-content-parent" id="cc-inner"> <div class="cc-content-parent" id="tp-container">
+<div id="tp-sidebar-wrapper">
+<div id="tp-emotion">
+<div data-action="emoHeader" id="emotion-header" style="background: #FFFFFF;width: 200px; height: 198px;">
+<a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+<img alt="" id="emotion-header-img" src="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941"/>
+<strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+</a>
+</div>
+</div>
+<div id="tp-navigation-wrapper">
+<div data-container="navigation">
+<div class="j-nav-variant-standard">
+<ul class="mainNav1" id="mainNav1">
+<!-- Active Main Sections -->
+<li class="nav-item"><a class="level_1" href="../../index.html"><span>Home</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../jingyuan-wang/index.html"><span>Jingyuan Wang</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../publications/index.html"><span>Publications</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../students-alumni/index.html"><span>Students &amp; Alumni</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../libcity/index.html"><span>LibCity</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../visualizations/index.html"><span>Visualizations</span></a></li>
+<li class="nav-item"><a class="level_1" href="../../seminars/index.html"><span>Seminars</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../seminars/2024/index.html"><span>2024</span></a></li>
+<li><a class="level_2" href="../../seminars/2023-1/index.html"><span>2023</span></a></li>
+<li><a class="level_2" href="../../seminars/2022-1/index.html"><span>2022</span></a></li>
+<li><a class="level_2" href="../../seminars/files/index.html"><span>files (Slides)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../readings/index.html"><span>Readings</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../readings/special-issues/index.html"><span>Special Issues</span></a></li>
+<li><a class="level_2" href="../../readings/sp1/index.html"><span>SP1 (Survey)</span></a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="level_1" href="../../contact-us/index.html"><span>Contact Us</span></a></li>
+<!-- Archived / Deprecated Sections (Hidden by default, controlled by Switch) -->
+<li class="nav-item nav-archived-section" style="display:none; border-top: 1px dashed #c7e4ff; margin-top: 6px;">
+<span style="display:block; padding: 6px 15px 2px 15px; font-size: 11px; color: #888; font-weight: bold; text-transform: uppercase;">-- Archived / 历史归档 --</span>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../application-fields/index.html"><span>Application Fields</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../interpretable-ml/index.html"><span>Interpretable ML</span></a>
+<ul class="mainNav2">
+<li><a class="level_2" href="../../interpretable-ml/svm-based-deep-net-1/index.html"><span>SVM-based Deep Net</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/traffic-prediction/index.html"><span>Traffic Prediction</span></a></li>
+<li><a class="level_2" href="../../interpretable-ml/wavelet-deep-net/index.html"><span>Wavelet Deep Net</span></a></li>
+</ul>
+</li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../maps/index.html"><span>Maps</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../knowledge-fusion/index.html"><span>Knowledge Fusion</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../st-pattern-mining/index.html"><span>ST Pattern Mining</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../tcp-fit-family/index.html"><span>TCP-FIT Family</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../veccity/index.html"><span>VecCity</span></a></li>
+<li class="nav-item nav-archived-section" style="display:none;"><a class="level_1" href="../../special-issues/urban-computing/index.html"><span>Urban Computing (FCS)</span></a></li>
+</ul>
+</div>
+<!-- Interactive Switcher -->
+<div class="archive-toggle-box" style="margin: 20px 15px; padding: 10px 12px; background: rgba(16, 114, 204, 0.06); border: 1px solid rgba(16, 114, 204, 0.25); border-radius: 6px; font-size: 12px;">
+<label style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin: 0; font-weight: bold; color: #1072CC;">
+<span>🗂️ 归档/历史栏目</span>
+<input id="toggle-archive-nav" onchange="toggleArchiveNav(this.checked)" style="cursor: pointer;" type="checkbox"/>
+</label>
+<div style="font-size: 11px; color: #666; margin-top: 4px; line-height: 1.3;">开启以展开前期迭代的分类与专题页面</div>
+</div>
+</div>
+</div>
+<div id="tp-sidebar">
+<div data-container="sidebar"><div id="cc-matrix-1765328887"><div class="j-module n j-htmlCode" id="cc-m-7369283887"></div><div class="j-module n j-hgrid" id="cc-m-11752886712"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3232397312"><div class="j-module n j-text" id="cc-m-11752886812"><p>
+    Current Visitors:
+</p></div></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3232397412"><div class="j-module n j-htmlCode" id="cc-m-11752887012"><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<noscript>
+</noscript> <!-- End of Statcounter Code --></div></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div></div></div>
+</div>
+</div>
+<div class="cc-content-parent" id="tp-content-wrapper">
+<div data-container="content" id="content_area"><div id="content_start"></div>
+<div id="cc-matrix-3502749212"><div class="j-module n j-header" id="cc-m-12815653012"><a name="12815653012"></a>
+<h1 class="" id="cc-m-header-12815653012">Seeing the Unseen: Learning Basis Confounder Representationsfor Robust Traffic Prediction</h1></div><div class="j-module n j-text" id="cc-m-12815653112"><p>
+<span face="Times New Roman, serif" style="font-family: 'Times New Roman', serif;"><span style="font-size: 18px;">J. Ji, W. Zhang, <strong>J. Wang</strong>, and C. Huang</span></span>
+</p>
+<p>
+<span face="Times New Roman, serif" style="font-family: 'Times New Roman', serif;"><span style="font-size: 18px;"><em>in Proceedings of the 31th ACM SIGKDD International Conference on Knowledge
+    Discovery &amp; Data Mining (<strong>KDD'25</strong>)</em></span></span>
+</p></div><div class="j-module n j-hr" id="cc-m-12815653212"> <div class="hr"></div>
+</div><div class="j-module n j-hgrid" id="cc-m-12815653312"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3502749312"></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3502749412"></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div><div class="j-module n j-textWithImage" id="cc-m-12815653412"><figure class="cc-imagewrapper cc-m-image-align-1">
+<img alt="" class="" data-image-id="8570400212" data-src="https://image.jimcdn.com/app/cms/image/transf/dimension=417x1024:format=png/path/saf8fe3b8eb300165/image/i6b2550f0f6be5afb/version/1742719412/image.png" data-src-height="181" data-src-width="561" id="cc-m-textwithimage-image-12815653412" sizes="(min-width: 417px) 417px, 100vw" src="../../image.jimcdn.com/app/cms/image/transf/dimension%3d417x1024_format%3dpng/path/saf8fe3b8eb300165/image/i6b2550f0f6be5afb/version/1742719412/image.png"/>
+</figure>
+<div>
+<div class="cc-m-textwithimage-inline-rte" data-action="text" data-name="text" id="cc-m-textwithimage-12815653412">
+<p style="text-align: justify;">
+<span style="font-size: 16px; text-align: justify;">Traffic prediction is essential for intelligent transportation systems and urban computing. It aims to establish a relationship between
+    historical traffic data 𝑋 and future traffic states 𝑌 by employing various statistical or deep learning methods. However, the relations of 𝑋 → 𝑌 are often influenced by external confounders that
+    simultaneously affect both 𝑋 and 𝑌, such as weather, accidents, and holidays. Existing deep-learning traffic prediction models adopt the classic front-door and back-door adjustments to address
+    the confounder issue. However, these methods have limitations in addressing continuous or undefined confounders, as they depend on predefined discrete values that are often impractical in
+    complex, real-world scenarios. To overcome this challenge, we propose the Spatial-Temporal sElf-superVised confoundEr learning (STEVE) model. This model introduces a basis vector approach,
+    creating a base confounder bank to represent any confounder as a linear combination of a group of basis vectors. It also incorporates selfsupervised auxiliary tasks to enhance the expressive
+    power of the base confounder bank. Afterward, a confounder-irrelevant relation decoupling module is adopted to separate the confounder effects from direct 𝑋 → 𝑌 relations. Extensive experiments
+    across four large-scale datasets validate our model’s superior performance in handling spatial and temporal distribution shifts and underscore its adaptability to unseen confounders. Our model
+    implementation is available at https://github.com/bigscity/STEVE_CODE.</span>
+</p> </div>
+</div>
+<div class="cc-clear"></div>
+</div><div class="j-module n j-hr" id="cc-m-12815653512"> <div class="hr"></div>
+</div><div class="j-module n j-downloadDocument" id="cc-m-12815653612"><div class="clearover">
+<div class="leftDownload">
+<a class="j-m-dowload" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1742719328/module/12815653612/name/Seeing%20the%20Unseen-%20Learning%20Basis%20Confounder%20Representations%20for%20Robust%20Traffic%20Prediction.pdf"> <img alt="Download" class="downloadImage" height="51" src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51"/>
+</a>
+</div>
+<div class="rightDownload" data-name="download-description">
+<div class="cc-m-download-title">Seeing the Unseen: Learning Basis Confounder Representations for Robust Traffic Prediction</div>
+<div class="cc-m-download-file">
+<div class="cc-m-download-file-name">Seeing the Unseen- Learning Basis Confou</div>
+<div class="cc-m-download-file-info">
+<span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+<span class="cc-m-download-file-size">1.9 MB</span>
+</div>
+<div class="cc-m-download-file-link"><a class="cc-m-download-link" href="https://saf8fe3b8eb300165.jimcontent.com/download/version/1742719328/module/12815653612/name/Seeing%20the%20Unseen-%20Learning%20Basis%20Confounder%20Representations%20for%20Robust%20Traffic%20Prediction.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</div><div class="j-module n j-hr" id="cc-m-12815653712"> <div class="hr"></div>
+</div><div class="j-module n j-text" id="cc-m-12815653812"><p>
+    @inproceedings{ji2025seeing,
+</p>
+<p>
+    title={Seeing the Unseen: Learning Basis Confounder Representations for Robust Traffic Prediction}, 
+</p>
+<p>
+    author={Ji, Jiahao and Zhang, Wentao and Wang, Jingyuan and Huang, Chao},
+</p>
+<p>
+    booktitle={Proceedings of the 31th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+</p>
+<p>
+    year={2025}
+</p>
+<p>
+    } 
+</p></div></div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="tp-footer">
+<div data-container="footer" id="contentfooter">
+<div class="leftrow">
+</div>
+<div class="rightrow">
+<span class="loggedout">
+<a href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165" id="login" rel="nofollow">Log in</a>
+</span>
+<span class="loggedin">
+<a href="https://cms.e.jimdo.com/app/cms/logout.php" id="logout" rel="nofollow" target="_top">
+        Log out    </a>
+    |
+    <a href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=2285318112" id="edit" rel="nofollow" target="_top">Edit</a>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+<!-- scroll to top button -->
+<li class="cc-FloatingButtonBarContainer-button-scroll">
+<a href="javascript:void(0);" title="Scroll to top">
+<span>Scroll to top</span>
+</a>
+</li>
+</ul>
+<div class="hidden" id="loginbox">
+<div id="loginbox-header">
+<a class="cc-close" href="#" title="Close this element">Close</a>
+<div class="c"></div>
+</div>
+<div id="loginbox-content">
+<div id="resendpw"></div>
+<div id="loginboxOuter"></div>
+</div>
+</div>
+<div class="hidden" id="loginbox-darklayer"></div>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+</body>
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/seeing-the-unseen-learning-basis-confounder-representations-for-robust-traffic-prediction/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:15:22 GMT -->
+</html>
