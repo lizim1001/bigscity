@@ -31,9 +31,7 @@
         <script src="assets.jimstatic.com/cookieControl.js.0c7250f3957d0aebc70e.js"></script>
     <script>window.CookieControlSet.setToOff();</script>
 
-    <style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
-
-        <link href="u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/maina05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_main_css"/>
+    <link href="u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/maina05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_main_css"/>
     <link href="u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/layout3417.css?t=1539927490" rel="stylesheet" type="text/css" id="jimdo_layout_css"/>
     <link href="u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/fonta05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_font_css"/>
 <script>     /* <![CDATA[ */     /*!  loadCss [c]2014 @scottjehl, Filament Group, Inc.  Licensed MIT */     window.loadCSS = window.loadCss = function(e,n,t){var r,l=window.document,a=l.createElement("link");if(n)r=n;else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=i[i.length-1]}var o=l.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",r.parentNode.insertBefore(a,n?r:r.nextSibling);var d=function(e){for(var n=a.href,t=o.length;t--;)if(o[t].href===n)return e.call(a);setTimeout(function(){d(e)})};return a.onloadcssdefined=d,d(function(){a.media=t||"all"}),a};     window.onloadCSS = function(n,o){n.onload=function(){n.onload=null,o&&o.call(n)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in n&&n.onloadcssdefined(o)}     /* ]]> */ </script>     <script>
@@ -56,10 +54,24 @@ onloadCSS(loadCss('assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289
      <script> (function(window) { 'use strict'; var regBuff = window.__regModuleBuffer = []; var regModuleBuffer = function() { var args = [].slice.call(arguments); regBuff.push(args); }; if (!window.regModule) { window.regModule = regModuleBuffer; } })(window); </script>
     <script src="assets.jimstatic.com/web.js.c8bf0a2e470c2b3ec6fd.js" async="true"></script>
     <script src="assets.jimstatic.com/at.js.619d00f8aa071522cb43.js"></script>
-    
 
+    <style>
+        html, body {
+            margin: 0;
+        }
+        .hidden { display: none; }
+        .n { padding: 5px; }
+        #emotion-header { position: relative; }
+        #emotion-header-logo, #emotion-header-title { position: absolute; }
 
-
+        /* 全局强制无衬线字体栈 */
+        html, body, #cc-inner, #tp-container, #tp-content-wrapper, #content_area, 
+        #content_area *, .j-module, .j-text, .headline, h1, h2, h3, p, div, span, a, strong, em {
+            font-family: Arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 </head>
 
 <body class="body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent" id="page-1436096687">
@@ -70,19 +82,10 @@ onloadCSS(loadCss('assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289
         
 <div id="emotion-header" data-action="emoHeader" style="background: #FFFFFF;width: 200px; height: 198px;">
             <a href="index.html" style="border: 0; text-decoration: none; cursor: pointer;">
-    
     <img src="u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941" id="emotion-header-img" alt=""/>
-
-
-
-    
-
-
-    <strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+    <strong id="emotion-header-title" style="left: 0%; top: 0%; font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif; color: #000000; display: none;"></strong>
             </a>
         </div>
-
-
       </div>
       <div id="tp-navigation-wrapper">
         <div data-container="navigation"><div class="j-nav-variant-standard">
@@ -94,9 +97,8 @@ onloadCSS(loadCss('assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289
 <li id="cc-nav-view-2232851312"><a href="libcity/index.html" class="level_1"><span>LibCity</span></a></li>
 <li id="cc-nav-view-1436540387"><a href="visualizations/index.html" class="level_1"><span>Visualizations</span></a></li>
 <li id="cc-nav-view-2257750712"><a href="seminars/index.html" class="level_1"><span>Seminars</span></a></li>
-
-
-<li id="cc-nav-view-1436537587"><a href="readings/index.html" class="level_1"><span>Readings</span></a></li><li id="cc-nav-view-1436095287"><a href="contact-us/index.html" class="level_1"><span>Contact Us</span></a></li>
+<li id="cc-nav-view-1436537587"><a href="readings/index.html" class="level_1"><span>Readings</span></a></li>
+<li id="cc-nav-view-1436095287"><a href="contact-us/index.html" class="level_1"><span>Contact Us</span></a></li>
 </ul>
 </div></div>
      </div>
@@ -137,148 +139,104 @@ scJsHost+
 	    <div id="content_area" data-container="content"><div id="content_start"></div>
         
         <div id="cc-matrix-1765330687"><div id="cc-m-7369270887" class="j-module n j-text "><p>
-    <span style="color: #993300; font-size: 27px;"><span color="#993300" style="color: #993300;"><span style="font-size: 27px;"><span color="#993300" style="color: #993300;"><span style="font-size: 27px;"><b>Beihang Interest Group</b></span></span></span></span></span><strong style="color: #993300; font-size: 27px;"> on SmartCity (BIGSCity)</strong>
+    <span style="color: #993300; font-size: 27px;"><b>Beihang Interest Group</b></span><strong style="color: #993300; font-size: 27px;"> on SmartCity (BIGSCity)</strong>
 </p></div><div id="cc-m-7366007687" class="j-module n j-hr ">    <div class="hr"></div>
 </div><div id="cc-m-12924352512" class="j-module n j-hr ">    <div class="hr"></div>
-</div><div id="cc-m-7366007787" class="j-module n j-text "><p style="text-align: justify;" data-start="113" data-end="667">
+</div><div id="cc-m-7366007787" class="j-module n j-text "><p style="text-align: justify; line-height: 1.6;">
     <span style="font-size: 16px;">The Beihang Interest Group on Smart City (BIGSCity Lab) focuses on data-driven science and technologies for building smarter and more intelligent cities. Its
     research interests span urban computing, spatio-temporal data mining, interpretable machine learning, and data visualization. BIGSCity has published more than 70 papers in CCF-A and UTD-24
-    journals and conferences across data mining and artificial intelligence, including <em data-start="543" data-end="549">PNAS</em>, <em data-start="551" data-end="571">Management Science</em>,
-    <em data-start="573" data-end="593">Journal of Finance</em>, <em data-start="595" data-end="601">TKDE</em>, <em data-start="603" data-end="609">TOIS</em>, <em data-start="611" data-end="616">KDD</em>, <em data-start="618" data-end="627">NeurIPS</em>, <em data-start="629" data-end="635">ICML</em>, <em data-start="637" data-end="643">ICLR</em>, <em data-start="645" data-end="651">AAAI</em>, and <em data-start="657" data-end="664">IJCAI</em>.</span>
+    journals and conferences across data mining and artificial intelligence, including <em>PNAS</em>, <em>Management Science</em>,
+    <em>Journal of Finance</em>, <em>TKDE</em>, <em>TOIS</em>, <em>KDD</em>, <em>NeurIPS</em>, <em>ICML</em>, <em>ICLR</em>, <em>AAAI</em>, and <em>IJCAI</em>.</span>
 </p>
 
-<p style="text-align: justify;" data-start="113" data-end="667">
-     
-</p>
+<p style="text-align: justify;">&nbsp;</p>
 
-<p style="text-align: justify;">
-     
-</p>
-
-<p style="text-align: justify;" data-start="669" data-end="972">
+<p style="text-align: justify; line-height: 1.6;">
     <span style="font-size: 16px;">Technologies developed by BIGSCity have been deployed in a wide range of real-world scenarios such as urban planning, intelligent transportation, and public health
     services. These innovations have benefited tens of millions of residents in cities including Beijing, Tianjin, Shenzhen, Wuxi, and Chengdu.</span>
 </p></div><div id="cc-m-12924352612" class="j-module n j-text "><p>
     <strong><span style="font-size: 26px; color: #b85f00;">Talent Recruitment</span></strong>
 </p>
 
-<p>
-     
+<p>&nbsp;</p>
+
+<p style="font-size: 16px; line-height: 1.6; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">
+    Our lab is recruiting highly <strong><span style="color: #ff0000;">self-motivated undergraduate interns, master’s students, and Ph.D. students</span></strong> in the areas of <span style="color: #ff0000;"><strong>AI for Science, Agentic AI, and Embodied Intelligence Models</strong></span>. Interested candidates are welcome to send their CVs to: <strong style="color: #b85f00;"><a href="mailto:jywang@buaa.edu.cn" style="color: #b85f00; font-weight: bold; text-decoration: none;">jywang@buaa.edu.cn</a></strong>.
 </p>
 
-<p>
-    <span style="font-size: 16px;"><span span="" id="tran_2_10">Our lab is recruiting highly <strong><span style="color: #ff0000;">self-motivated undergraduate interns, master’s students, and Ph.D.
-    students</span></strong> in the areas of <span style="color: #ff0000;"><strong>AI for Science, Agentic AI, and Embodied Intelligence Models</strong></span>. Interested candidates are welcome to
-    send their CVs to</span><span span="" id="tran_2_10">: <span style="color: #b85f00;">jywang@buaa.edu.cn</span>.</span></span>
+<p>&nbsp;</p>
+
+<p style="font-size: 16px; line-height: 1.6; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">
+    实验室在<span style="color: #ff0000;"><strong>AI for Science，Agentic AI，具身智能大模型</strong></span>方向招收具有自驱力的<strong><span style="color: #ff0000;">本科实习生，硕士研究生，以及博士研究生</span></strong>。感兴趣的同学请发简历至邮箱：<strong style="color: #b85f00;"><a href="mailto:jywang@buaa.edu.cn" style="color: #b85f00; font-weight: bold; text-decoration: none;">jywang@buaa.edu.cn</a></strong>。
 </p>
 
-<p>
-    <span style="font-size: 16px;"> </span>
+<p style="font-size: 16px; line-height: 1.6; margin-top: 10px; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">
+    <strong><span style="color: #ff0000;">实验室招聘青年教师、博士后，有意者请联系 </span></strong><strong style="color: #b85f00;"><a href="mailto:jywang@buaa.edu.cn" style="color: #b85f00; font-weight: bold; text-decoration: none;">jywang@buaa.edu.cn</a></strong>。
+</p></div><div id="cc-m-12007730412" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-12929909212" class="j-module n j-text " style="font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;"><p id="cc-m-header-11751937212" class="headline cc-m-header-inline-rte" style="margin-bottom: 4px; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">
+    <span style="font-size: 28px; color: #e36664; font-weight: 600; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">News</span>
 </p>
 
-<article class="text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto scroll-mt-(--header-height)" dir="auto" tabindex="-1" data-turn-id="006a19d3-e169-449f-93a5-ea3e3b669129" data-testid="conversation-turn-1" data-scroll-anchor="false" data-turn="user">
-    <div class="text-base my-auto mx-auto pt-3 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)">
-        <div class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col" tabindex="-1">
-            <div class="flex max-w-full flex-col grow">
-                <div data-message-author-role="user" data-message-id="006a19d3-e169-449f-93a5-ea3e3b669129" dir="auto" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1">
-                    <div class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start">
-                        <div class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]" data-multiline="">
-                            <div class="whitespace-pre-wrap">
-                                <span style="font-size: 16px;">实验室在<span style="color: #ff0000;"><strong>AI for Science，Agentic AI，具身智能大模型</strong></span>方向招收具有自驱力的<strong><span style="color: #ff0000;">本科实习生，硕士研究生，以及博士研究生</span></strong>。感兴趣的同学请发简历至邮箱： <span style="color: #b85f00;" span="" id="tran_2_10"><strong>jywang@buaa.edu.cn</strong></span><strong>.</strong></span>
-                            </div>
-
-                            <p>
-                                <span style="font-size: 16px;"> </span>
-                            </p>
-
-                            <div class="whitespace-pre-wrap">
-                                <span style="font-size: 16px;"><strong><span style="color: #ff0000;">实验室招聘青年教师、博士后，有意者请联系</span><span style="color: #ff0000;"> </span></strong><span span="" id="tran_2_10" style="color: #b85f00;">jywang@buaa.edu.cn</span>.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</article></div><div id="cc-m-12007730412" class="j-module n j-hr ">    <div class="hr"></div>
-</div><div id="cc-m-12929909212" class="j-module n j-text "><p id="cc-m-header-11751937212" class="headline cc-m-header-inline-rte" style="margin-bottom: 4px;">
-    <span style="font-size: 28px; color: #e36664; font-weight: 600;">News</span>
-</p>
-
-<div style="font-size: 18px; line-height: 1.7;">
-    <!-- AAAI 2026: 顶会 AI，用红色系 -->
-
+<div style="font-size: 18px; line-height: 1.7; font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;">
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;"><span style="color: #e3a12c; font-weight: 600;"><span style="color: #e36664; font-weight: 600;">★</span><span style="color: #333333; font-weight: 300;"> </span></span></span>6 papers accepted by <span style="color: #e36664; font-weight: 600;">KDD 2026</span> (Cycle 2): 1 in the Research
-        Track, 3 in the AI for Sciences Track, 1 in the Applied Data Science (ADS) Track, and 1 in the Datasets &amp; Benchmarks Track<span> </span><span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">6 papers accepted by </span><strong style="color: #e36664;">KDD 2026</strong> <span style="color: #333333;">(Cycle 2): 1 in the Research Track, 3 in the AI for Sciences Track, 1 in the Applied Data Science (ADS) Track, and 1 in the Datasets &amp; Benchmarks Track !</span>
     </div>
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;"><span style="color: #e3a12c; font-weight: 600;"><span style="color: #e36664; font-weight: 600;">★</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">1 paper accepted by</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #e36664;"><span style="color: #e36664;">IJCAI 2026</span></span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">!</span></span></span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">IJCAI 2026</strong> <span style="color: #333333;">!</span>
     </div>
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;"><span style="color: #e3a12c; font-weight: 600;"><span style="color: #e36664; font-weight: 600;">★</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">1 paper accepted by</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #e36664;"><span style="color: #e36664;">ICML 2026</span></span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">!</span></span></span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">ICML 2026</strong> <span style="color: #333333;">!</span>
     </div>
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;"><span style="color: #e3a12c; font-weight: 600;"><span style="color: #e36664; font-weight: 600;">★</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">1 paper accepted by</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #e36664;"><span style="color: #e36664;">ICLR 2026</span></span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">!</span></span></span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">ICLR 2026</strong> <span style="color: #333333;">!</span>
     </div>
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;"><span style="color: #e3a12c; font-weight: 600;">★</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #e3a12c;">IEEE TPAMI</span><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">paper</span><span style="color: #333333; font-weight: 300;"> </span><em style="color: #333333; font-weight: 300;">“How to Break It Down for Building It Up? Theory-guided Graph Decomposition Learning for
-        Spatiotemporal Traffic Prediction”</em><span style="color: #333333; font-weight: 300;"> </span><span style="color: #333333; font-weight: 300;">accepted !</span></span>
+        <span style="color: #e3a12c; font-weight: 600;">★</span> <strong style="color: #e3a12c;">IEEE TPAMI</strong> <span style="color: #333333;">paper <em>“How to Break It Down for Building It Up? Theory-guided Graph Decomposition Learning for Spatiotemporal Traffic Prediction”</em> accepted !</span>
     </div>
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>5 papers (including</span> <strong>2 oral</strong><span>) accepted by</span> <strong style="color: #e36664;">AAAI 2026</strong>
-        <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">5 papers (including <strong>2 oral</strong>) accepted by </span><strong style="color: #e36664;">AAAI 2026</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- T-ITS: 期刊，用金色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e3a12c; font-weight: 600;">★</span> <strong style="color: #e3a12c;">IEEE T-ITS</strong> <span>paper</span> <em>“Spatio-Temporal Data Enhanced Vision-Language Model for
-        Traffic Scene Understanding”</em> <span>accepted !</span>
+        <span style="color: #e3a12c; font-weight: 600;">★</span> <strong style="color: #e3a12c;">IEEE T-ITS</strong> <span style="color: #333333;">paper <em>“Spatio-Temporal Data Enhanced Vision-Language Model for Traffic Scene Understanding”</em> accepted !</span>
     </div>
-    <!-- NeurIPS 2026: 顶会 AI，用红色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>1 paper accepted by</span> <span style="color: #e36664;"><strong style="color: #e36664;">NeurIPS 2026</strong></span>
-        <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">NeurIPS 2026</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- CIKM 2025: 数据/检索类，用蓝色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>1 paper accepted by </span><strong><span style="color: #e36664;">CIKM 2025</span></strong> <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">CIKM 2025</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- VLDB 2025: 数据库，用蓝色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>1 paper accepted by </span><strong><span style="color: #e36664;">VLDB 2025</span></strong> <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">VLDB 2025</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- ICML 2025: 顶会 AI，用红色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>1 paper accepted by</span> <strong style="color: #e36664;">ICML 2025</strong> <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">ICML 2025</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- ICDE 2025: 数据库，用蓝色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>2 papers accepted by </span><strong><span style="color: #e36664;">ICDE 2025</span></strong> <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">2 papers accepted by </span><strong style="color: #e36664;">ICDE 2025</strong> <span style="color: #333333;">!</span>
     </div>
-    <!-- IJCAI 2025: 顶会 AI，用红色系 -->
 
     <div style="margin: 6px 0;">
-        <span style="color: #e36664; font-weight: 600;">★</span> <span>1 paper accepted by</span> <strong style="color: #e36664;">IJCAI 2025</strong> <span>!</span>
+        <span style="color: #e36664; font-weight: 600;">★</span> <span style="color: #333333;">1 paper accepted by </span><strong style="color: #e36664;">IJCAI 2025</strong> <span style="color: #333333;">!</span>
     </div>
 </div></div><div id="cc-m-12929909312" class="j-module n j-hr ">    <div class="hr"></div>
 </div><div id="cc-m-11751937612" class="j-module n j-text "><h1 id="cc-m-header-11751937212" class="headline cc-m-header-inline-rte" style="line-height: 42px; min-height: 42px;" data-action="header" data-name="header">
     <span style="font-size: 18px; color: #e36664;">BIGCity: A Universal Spatiotemporal Model for Unified Trajectory and Traffic State Analysis</span>
-</h1></div><div id="cc-m-12173749612" class="j-module n j-text "><p style="text-align: justify;">
-    <span style="font-size: 16px;"><span id="tran_2_10"></span></span><span style="font-size: 16px;">BIGCity (纵横) is a unified spatiotemporal model designed to process text, trajectory, and traffic
+</h1></div><div id="cc-m-12173749612" class="j-module n j-text "><p style="text-align: justify; line-height: 1.6;">
+    <span style="font-size: 16px;">BIGCity (纵横) is a unified spatiotemporal model designed to process text, trajectory, and traffic
     flow data simultaneously. As illustrated in the figure below, BIGCity supports eight distinct tasks across two primary categories: traffic state prediction and trajectory analysis. Specifically,
     traffic state prediction encompasses one-step (O-Step) and multi-step (M-Step) flow prediction, as well as traffic state imputation (TSI). The trajectory tasks include travel time estimation
-    (TTE), next-hop prediction (NextH), similar trajectory search (Simi), trajectory classification (CLAS), and trajectory recovery (Reco).</span> <a href="publications/bigcity-a-universal-spatiotemporal-model-for-unified-trajectory-and-traffic-state-data-analysis/index.html" title="BIGCity: A Universal Spatiotemporal Model for Unified Trajectory and Traffic State Data Analysis">read more</a>
+    (TTE), next-hop prediction (NextH), similar trajectory search (Simi), trajectory classification (CLAS), and trajectory recovery (Reco).</span> <a href="publications/bigcity-a-universal-spatiotemporal-model-for-unified-trajectory-and-traffic-state-data-analysis/index.html" title="BIGCity: A Universal Spatiotemporal Model for Unified Trajectory and Traffic State Data Analysis">read more</a>
 </p></div><div id="cc-m-12173749812" class="j-module n j-imageSubtitle "><figure class="cc-imagewrapper cc-m-image-align-1 cc-m-width-maxed">
 <img sizes="(min-width: 750px) 750px, 100vw" id="cc-m-imagesubtitle-image-12173749812" src="image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i7f8e400a3a2d4a9b/version/1764096750/image.png" alt="" class="" data-src-width="2736" data-src-height="484" data-src="image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i7f8e400a3a2d4a9b/version/1764096750/image.png" data-image-id="8167949412"/>    
 
@@ -289,27 +247,27 @@ scJsHost+
 
     window.regModule("module_imageSubtitle", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":12173749812,"widthEqualsContent":"1","resizeWidth":"750","resizeHeight":133},"id":12173749812});
 // ]]>
-</script></div><div id="cc-m-12937336812" class="j-module n j-text "><p style="text-align: justify;">
-    <span style="font-size: 16px;"><span id="tran_2_10"></span></span><strong><span style="font-size: 16px;">BIGCity advances the field with two primary contributions: </span></strong>
+</script></div><div id="cc-m-12937336812" class="j-module n j-text "><p style="text-align: justify; line-height: 1.6;">
+    <strong><span style="font-size: 16px;">BIGCity advances the field with two primary contributions: </span></strong>
 </p>
 
-<p style="line-height: 19.6px; text-align: justify;" data-path-to-node="2,2">
-    <span style="font-size: 16px;"><strong>1. Unified Spatiotemporal Data Representation:</strong> We introduce the STUnit and the ST Tokenizer. Premised on the observation that
+<p style="line-height: 1.6; text-align: justify;" data-path-to-node="2,2">
+    <span style="font-size: 16px;"><strong>1. Unified Spatiotemporal Data Representation:</strong> We introduce the STUnit and the ST Tokenizer. Premised on the observation that
     heterogeneous urban data is intrinsically anchored to the city road network—where nodes possess both static structural attributes and dynamic traffic states—the ST Tokenizer is engineered to
     rigorously capture this complex network topology.</span>
 </p>
 
-<p style="line-height: 19.6px; text-align: justify;" data-path-to-node="2,2">
-     
+<p style="line-height: 1.6; text-align: justify;" data-path-to-node="2,2">
+     
 </p>
 
-<p style="line-height: 19.6px; text-align: justify;" data-path-to-node="2,4">
+<p style="line-height: 1.6; text-align: justify;" data-path-to-node="2,4">
     <span style="font-size: 16px;"><strong>1)</strong> Road Network Representation: The ST Tokenizer deploys parallel static and dynamic encoders to disentangle time-invariant properties from
     temporal fluctuations. Subsequently, a fusion encoder synthesizes these distinct embeddings to yield a holistic, dynamic representation of the road network.</span>
 </p>
 
-<p style="line-height: 19.6px; text-align: justify;" data-path-to-node="2,4">
-    <span style="font-size: 16px;"><strong>2)</strong> Representation of Spatio-Temporal Data As illustrated in the figure below, we observe that both trajectories and traffic states are
+<p style="line-height: 1.6; text-align: justify;" data-path-to-node="2,4">
+    <span style="font-size: 16px;"><strong>2)</strong> Representation of Spatio-Temporal Data: As illustrated in the figure below, we observe that both trajectories and traffic states are
     fundamentally sequences sampled from a dynamic road network. From this perspective, the primary distinction between the two lies in their sampling mechanisms. Consequently, we designed the STUnit
     to unify both trajectory and traffic state data into a standardized sequence format.</span>
 </p></div><div id="cc-m-12937337112" class="j-module n j-imageSubtitle "><figure class="cc-imagewrapper cc-m-image-align-1 cc-m-width-maxed">
@@ -322,8 +280,8 @@ scJsHost+
 
     window.regModule("module_imageSubtitle", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":12937337112,"widthEqualsContent":"1","resizeWidth":"750","resizeHeight":365},"id":12937337112});
 // ]]>
-</script></div><div id="cc-m-12937338312" class="j-module n j-text "><p style="text-align: justify;">
-    <span style="font-size: 16px;"><strong>2. Task-oriented Prompts:</strong> To resolve ambiguity where identical spatiotemporal inputs correspond to different tasks, we introduce task-oriented
+</script></div><div id="cc-m-12937338312" class="j-module n j-text "><p style="text-align: justify; line-height: 1.6;">
+    <span style="font-size: 16px;"><strong>2. Task-oriented Prompts:</strong> To resolve ambiguity where identical spatiotemporal inputs correspond to different tasks, we introduce task-oriented
     prompts as identifiers. This unifies diverse ST tasks into a single dataset for joint training. We categorize tasks into four types (Table 1) yielding either discrete classification or continuous
     regression outputs, designated by [CLAS] and [REG] placeholders respectively. These placeholders, combined with task-specific templates (detailed in Section V.A), explicitly define output types
     and quantities for the model.</span>
@@ -338,12 +296,12 @@ scJsHost+
     window.regModule("module_imageSubtitle", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":12937338712,"widthEqualsContent":"1","resizeWidth":"750","resizeHeight":216},"id":12937338712});
 // ]]>
 </script></div><div id="cc-m-11752856412" class="j-module n j-text "><p style="text-align: justify;">
-    <span style="font-size: 18px;"><strong>Welcome to visit our </strong></span><span style="font-size: 18px;"><b><a href="https://github.com/bigscity/BIGCity" target="_blank" title="https://github.com/bigscity/BIGCity">GitHub repository</a> and <a href="https://huggingface.co/XieYuBUAA/BIGCity/tree/main" target="_blank" title="https://huggingface.co/XieYuBUAA/BIGCity/tree/main">website</a> for more details.</b></span>
+    <span style="font-size: 18px;"><strong>Welcome to visit our </strong></span><span style="font-size: 18px;"><b><a href="https://github.com/bigscity/BIGCity" target="_blank" title="https://github.com/bigscity/BIGCity">GitHub repository</a> and <a href="https://huggingface.co/XieYuBUAA/BIGCity/tree/main" target="_blank" title="https://huggingface.co/XieYuBUAA/BIGCity/tree/main">website</a> for more details.</b></span>
 </p></div><div id="cc-m-12194244212" class="j-module n j-text "><p style="text-align: justify;">
-    <span style="font-size: 18px;"><strong>If you find BIGCity</strong></span><span style="font-size: 18px;"><b> useful for your research or development, please cite the following <a href="https://arxiv.org/pdf/2412.00953" title="https://arxiv.org/pdf/2412.00953" target="_blank">paper</a>.</b></span>
-</p></div><div id="cc-m-12194244412" class="j-module n j-text "><p>
+    <span style="font-size: 18px;"><strong>If you find BIGCity</strong></span><span style="font-size: 18px;"><b> useful for your research or development, please cite the following <a href="https://arxiv.org/pdf/2412.00953" title="https://arxiv.org/pdf/2412.00953" target="_blank">paper</a>.</b></span>
+</p></div><div id="cc-m-12194244412" class="j-module n j-text "><p style="line-height: 1.6;">
     <span style="font-size: 16px;">Xie Yu, Jingyuan Wang, Yifan Yang, Qian Huang, Ke Qu. “BIGCity: A Universal Spatiotemporal Model for Unified Trajectory and Traffic State Data Analysis”. <em>In
-    Proceedings of the 41th International Conference on Advances on Data Engineering (ICDE '25)</em>.  2025, pp. 4455-4469</span>
+    Proceedings of the 41th International Conference on Advances on Data Engineering (ICDE '25)</em>.  2025, pp. 4455-4469</span>
 </p></div><div id="cc-m-7366007987" class="j-module n j-hr ">    <div class="hr"></div>
 </div></div>
         
@@ -352,17 +310,11 @@ scJsHost+
     <div class="clear"></div>
     <div id="tp-footer">
 	    <div id="contentfooter" data-container="footer">
-
-    
-    <div class="leftrow">
-            </div>
-
+    <div class="leftrow"></div>
     <div class="rightrow">
-            
     <span class="loggedout">
         <a rel="nofollow" id="login" href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165">Log in</a>
     </span>
-
 <span class="loggedin">
     <a rel="nofollow" id="logout" target="_top" href="https://cms.e.jimdo.com/app/cms/logout.php">
         Log out    </a>
@@ -370,58 +322,38 @@ scJsHost+
     <a rel="nofollow" id="edit" target="_top" href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=1436096687">Edit</a>
 </span>
         </div>
-
     <div class="jimdo-free-footer-ad "> <a class="jimdo-footer-branding pull-left" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" rel="nofollow">Jimdo</a> <p class="pull-left"> <strong>This site was created with Jimdo Creator!</strong> Sign up for free now at <a id="fallback-ad-textlink" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" class="jimdolink" rel="nofollow">https://www.jimdo.com</a> </p> </div> 
 </div>
-
       <div class="clear"></div>
     </div>
   </div></div>
     <ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
-
-                    <!-- scroll to top button -->
             <li class="cc-FloatingButtonBarContainer-button-scroll">
                 <a href="javascript:void(0);" title="Scroll to top">
                     <span>Scroll to top</span>
                 </a>
             </li>
             <script>// <![CDATA[
-
     window.regModule("common_scrolltotop", []);
 // ]]>
 </script>    </ul>
 
 <div id="loginbox" class="hidden">
-
     <div id="loginbox-header">
-
     <a class="cc-close" title="Close this element" href="#">Close</a>
-
     <div class="c"></div>
-
 </div>
-
 <div id="loginbox-content">
-
         <div id="resendpw"></div>
-
         <div id="loginboxOuter"></div>
     </div>
 </div>
 <div id="loginbox-darklayer" class="hidden"></div>
 <script>// <![CDATA[
-
     window.regModule("web_login", {"url":"https:\/\/smartcity-buaa.jimdoweb.com\/","pageId":1436096687});
 // ]]>
 </script>
-
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-
-
-
-
 </body>
-
 <!-- Mirrored from smartcity-buaa.jimdoweb.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Sep 2026 10:29:52 GMT -->
 </html>
