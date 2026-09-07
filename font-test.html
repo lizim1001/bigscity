@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>字体测试</title>
+    <link href="u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/fonta05d.css?t=1788420789" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            padding: 20px;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            color: red;
+            font-size: 22pt;
+            font-weight: 700;
+        }
+        .content {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>字体测试页面</h1>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li class="content">National Natural Science Foundation of China: IoT & Social Computing</li>
+            <li class="content">National Natural Science Foundation of China: Urban Computing</li>
+            <li class="content">National Natural Science Foundation of China: Datacenter Congestion Control</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Patents</h2>
+        <p class="content"><b>United States authorized</b> patents</p>
+        <ul>
+            <li class="content">Patent 1</li>
+            <li class="content">Patent 2</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>当前字体信息</h3>
+        <p class="content">这段文字应该使用Ubuntu字体</p>
+        <p style="font-family: Arial">这段使用Arial字体作为对比</p>
+    </div>
+
+    <script>
+        // 检测字体加载
+        document.fonts.ready.then(() => {
+            const testElement = document.querySelector('.content');
+            const fontFamily = window.getComputedStyle(testElement).fontFamily;
+            console.log('Loaded font:', fontFamily);
+
+            const info = document.createElement('div');
+            info.innerHTML = '<strong>当前字体:</strong> ' + fontFamily;
+            info.style.cssText = 'background: #ffffcc; padding: 10px; margin: 10px 0;';
+            document.body.appendChild(info);
+        });
+    </script>
+</body>
+</html>
