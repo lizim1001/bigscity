@@ -1,0 +1,133 @@
+div.clear {clear:both;}
+
+#cc-inner {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF,endColorstr=#CCFFFFFF)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF,endColorstr=#CCFFFFFF);   /* IE6 & 7 */
+	zoom: 1;
+	background-color: rgba(255,255,255,0.8);
+}
+
+#tp-container {
+	border-top: 4px solid #1072CC;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 1090px;
+    padding: 0;
+}
+
+#tp-sidebar-wrapper {
+	color: #333;
+	float: left;
+	width: 250px;
+}
+
+#tp-content-wrapper {
+	float: left;
+	padding: 25px 40px 40px;
+	width: 760px;
+}
+
+/*  Navigation
+----------------------------------------------- */
+ul.mainNav1,
+ul.mainNav2,
+ul.mainNav3 {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.mainNav2 li a span {
+	padding-left: 1em;
+}
+ul.mainNav3 li a span {
+	padding-left: 2em;
+}
+
+ul.mainNav1 li a, ul.mainNav1 li a:visited {
+	background-color: transparent;
+	border-right: 4px solid transparent;
+	color: #666;
+	display: block;
+	font-weight: 300;
+	padding: 10px 20px;
+	text-decoration: none;
+	word-wrap: break-word;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+ul li a.current, ul li a.current:visited {
+	background-color: #94ccff;
+	border-right: 4px solid #1072CC;
+}
+ul.mainNav1 li a.parent, 
+ul.mainNav1 li a.parent:visited {
+	background-color: #c7e4ff;
+}
+
+ul.mainNav1 li a:hover,
+ul.mainNav1 li a:focus,
+ul.mainNav1 li a.parent:hover,
+ul.mainNav1 li a.parent:focus {
+	background-color: #61b3ff;
+	border-right: 4px solid #1072CC;
+}
+
+ul li a.current:hover {
+	background-color: #61b3ff;
+}
+
+/*  Emotion header
+----------------------------------------------- */
+#tp-emotion {
+  height:200px;
+  margin: 25px;
+  overflow: hidden;
+  width:200px;
+}
+
+html body #tp-emotion-header {
+	position: relative;
+}
+
+/*  Content
+----------------------------------------------- */
+#tp-content-wrapper {
+	color: #333;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+/*  Sidebar
+----------------------------------------------- */
+#tp-sidebar {
+	border-top: 4px solid #1072CC;
+	line-height: 1.5em;
+	margin: 25px 0 0 20px;
+	padding: 25px 0;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+/*  Footer
+----------------------------------------------- */
+#tp-footer {
+	border-top: 4px solid #1072CC;
+	color: #999;
+	font-size: 0.75em;
+	font-weight: 300;
+	margin: 20px 0 0 290px;
+	padding: 20px;
+	width: 760px;
+}
+
+#tp-footer a:link,
+#tp-footer a:visited {
+	color: #999;
+	text-decoration: none;
+}

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/special-issues/urban-computing/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Sep 2026 10:47:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8"/>
+    <link rel="dns-prefetch preconnect" href="../../u.jimcdn.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../assets.jimstatic.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../image.jimcdn.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../fonts.jimstatic.com/index.html" crossorigin="anonymous"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="description" content=""/>
+<meta name="robots" content="index, follow, archive"/>
+<meta property="st:section" content=""/>
+<meta name="generator" content="Jimdo Creator"/>
+<meta name="twitter:title" content="Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital footprints"/>
+<meta name="twitter:description" content="Frontiers of Computer Science Special Column on Smart Cities and Urban Computing"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:url" content="index.html"/>
+<meta property="og:title" content="Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital footprints"/>
+<meta property="og:description" content="Frontiers of Computer Science Special Column on Smart Cities and Urban Computing"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Beihang Interest Group on SmartCity (BIGSCity)"/><title>Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital footprints - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link rel="shortcut icon" href="../../assets.jimstatic.com/s/img/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml" title="Blog" href="../../rss/blog"/>    
+<link rel="canonical" href="index.html"/>
+
+        <script src="../../assets.jimstatic.com/ckies.js.c52961c41c57a9b4f804.js"></script>
+
+        <script src="../../assets.jimstatic.com/cookieControl.js.0c7250f3957d0aebc70e.js"></script>
+    <script>window.CookieControlSet.setToOff();</script>
+
+    <style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+
+        <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/maina05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_main_css"/>
+    <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/layout3417.css?t=1539927490" rel="stylesheet" type="text/css" id="jimdo_layout_css"/>
+    <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/fonta05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_font_css"/>
+<script>     /* <![CDATA[ */     /*!  loadCss [c]2014 @scottjehl, Filament Group, Inc.  Licensed MIT */     window.loadCSS = window.loadCss = function(e,n,t){var r,l=window.document,a=l.createElement("link");if(n)r=n;else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=i[i.length-1]}var o=l.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",r.parentNode.insertBefore(a,n?r:r.nextSibling);var d=function(e){for(var n=a.href,t=o.length;t--;)if(o[t].href===n)return e.call(a);setTimeout(function(){d(e)})};return a.onloadcssdefined=d,d(function(){a.media=t||"all"}),a};     window.onloadCSS = function(n,o){n.onload=function(){n.onload=null,o&&o.call(n)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in n&&n.onloadcssdefined(o)}     /* ]]> */ </script>     <script>
+// <![CDATA[
+onloadCSS(loadCss('../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css') , function() {
+    this.id = 'jimdo_web_css';
+});
+// ]]>
+</script>
+<link href="../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload" as="style"/>
+<noscript>
+<link href="../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="stylesheet"/>
+</noscript>
+    <script>
+    //<![CDATA[
+        var jimdoData = {"isTestserver":false,"isLcJimdoCom":false,"isJimdoHelpCenter":false,"isProtectedPage":false,"cstok":"127e8c97199c0f29c352ace05b7cf4086b3aa0d4","cacheJsKey":"6ea26e6deac06ebe586b7ebbccc5864db7ba4e8d","cacheCssKey":"6ea26e6deac06ebe586b7ebbccc5864db7ba4e8d","cdnUrl":"https:\/\/assets.jimstatic.com\/","minUrl":"https:\/\/assets.jimstatic.com\/app\/cdn\/min\/file\/","authUrl":"https:\/\/a.jimdo.com\/","webPath":"https:\/\/smartcity-buaa.jimdoweb.com\/","appUrl":"https:\/\/a.jimdo.com\/","cmsLanguage":"en_US","isFreePackage":true,"mobile":false,"isDevkitTemplateUsed":false,"isTemplateResponsive":false,"websiteId":"saf8fe3b8eb300165","pageId":2214243112,"packageId":1,"shop":{"deliveryTimeTexts":{"1":"Ships within 1-3 days","2":"Ships within 3-5 days","3":"Delivery in 5-8 days"},"checkoutButtonText":"Check out","isReady":false,"currencyFormat":{"pattern":"\u00a4#,##0.00","convertedPattern":"$#,##0.00","symbols":{"GROUPING_SEPARATOR":",","DECIMAL_SEPARATOR":".","CURRENCY_SYMBOL":"\u00a5"}},"currencyLocale":"zh_CN"},"tr":{"gmap":{"searchNotFound":"The entered address doesn't exist or couldn't be found.","routeNotFound":"The driving directions couldn't be determined. Possible reasons: The starting address is not specific enough or it is too far from the destination address."},"shop":{"checkoutSubmit":{"next":"Next step","wait":"Please wait"},"paypalError":"An error has occurred. Please try again!","cartBar":"Go to Shopping Cart","maintenance":"Sorry, this store is not available at the moment. Please try again later.","addToCartOverlay":{"productInsertedText":"This item was added to your cart.","continueShoppingText":"Continue shopping","reloadPageText":"Refresh"},"notReadyText":"This store has not been completely set up.","numLeftText":"There are not more than {:num} of this item available at this time.","oneLeftText":"There is only one more of this item available."},"common":{"timeout":"Oops, it looks like there's been an error on our end and your last change didn't go through. Please try again in a minute. "},"form":{"badRequest":"An error has occurred! This form could not be submitted. Please try again later."}},"jQuery":"jimdoGen002","isJimdoMobileApp":false,"bgConfig":null,"bgFullscreen":null,"responsiveBreakpointLandscape":767,"responsiveBreakpointPortrait":480,"copyableHeadlineLinks":false,"tocGeneration":false,"googlemapsConsoleKey":false,"loggingForAnalytics":false,"loggingForPredefinedPages":false,"isFacebookPixelIdEnabled":false,"userAccountId":"b43d6bb0-ab82-46ea-a803-0df876a39e06"};
+    // ]]>
+</script>
+
+     <script> (function(window) { 'use strict'; var regBuff = window.__regModuleBuffer = []; var regModuleBuffer = function() { var args = [].slice.call(arguments); regBuff.push(args); }; if (!window.regModule) { window.regModule = regModuleBuffer; } })(window); </script>
+    <script src="../../assets.jimstatic.com/web.js.c8bf0a2e470c2b3ec6fd.js" async="true"></script>
+    <script src="../../assets.jimstatic.com/at.js.619d00f8aa071522cb43.js"></script>
+    
+
+
+
+</head>
+
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-2214243112">
+
+<div id="cc-inner" class="cc-content-parent">  <div id="tp-container" class="cc-content-parent">
+    <div id="tp-sidebar-wrapper">
+	    <div id="tp-emotion">
+        
+<div id="emotion-header" data-action="emoHeader" style="background: #FFFFFF;width: 200px; height: 198px;">
+            <a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+    
+    <img src="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941" id="emotion-header-img" alt=""/>
+
+
+
+    
+
+
+    <strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+            </a>
+        </div>
+
+
+      </div>
+      <div id="tp-navigation-wrapper">
+        <div data-container="navigation"><div class="j-nav-variant-standard">
+<ul id="mainNav1" class="mainNav1">
+<li id="cc-nav-view-1436096687"><a href="../../index.html" class="level_1"><span>Home</span></a></li>
+<li id="cc-nav-view-1436096787"><a href="../../jingyuan-wang/index.html" class="level_1"><span>Jingyuan Wang</span></a></li>
+<li id="cc-nav-view-2222426012"><a href="../../publications/index.html" class="level_1"><span>Publications</span></a></li>
+<li id="cc-nav-view-2221018512"><a href="../../students-alumni/index.html" class="level_1"><span>Students &amp; Alumni</span></a></li>
+<li id="cc-nav-view-2232851312"><a href="../../libcity/index.html" class="level_1"><span>LibCity</span></a></li>
+<li id="cc-nav-view-1436540387"><a href="../../visualizations/index.html" class="level_1"><span>Visualizations</span></a></li>
+<li id="cc-nav-view-2257750712"><a href="../../seminars/index.html" class="level_1"><span>Seminars</span></a></li>
+<li id="cc-nav-view-1436537587"><a href="../../readings/index.html" class="level_1"><span>Readings</span></a></li>
+<li id="cc-nav-view-1436095287"><a href="../../contact-us/index.html" class="level_1"><span>Contact Us</span></a></li>
+</ul>
+</div></div>
+     </div>
+      <div id="tp-sidebar">
+        <div data-container="sidebar"><div id="cc-matrix-1765328887"><div id="cc-m-7369283887" class="j-module n j-htmlCode "><script type="text/javascript" id="clustrmaps" src="../../cdn.clustrmaps.com/map_v241bd.js?cl=080808&amp;w=a&amp;t=n&amp;d=ev8GjzBkQ5gpMEUCQubC8uFtQPm3DF_TkLDEUxyQdXA&amp;co=ffffff&amp;ct=808080&amp;cmo=3acc3a&amp;cmn=ff5353"></script></div><div id="cc-m-11752886712" class="j-module n j-hgrid ">    <div class="cc-m-hgrid-column" style="width: 49%;">
+        <div id="cc-matrix-3232397312"><div id="cc-m-11752886812" class="j-module n j-text "><p>
+    Current Visitors:
+</p></div></div>    </div>
+            <div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+        <div class="cc-m-hgrid-column last" style="width: 49%;">
+        <div id="cc-matrix-3232397412"><div id="cc-m-11752887012" class="j-module n j-htmlCode "><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=9846202; 
+var sc_invisible=0; 
+var sc_security="d55beb08"; 
+var sc_https=1; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+//]]>
+</script> <noscript>
+<div class="statcounter">
+    <a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/9846202/0/d55beb08/0/" alt="Web Analytics"/></a>
+</div></noscript> <!-- End of Statcounter Code --></div></div>    </div>
+    
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+
+<br class="cc-clear"/>
+
+</div></div></div>
+      </div>
+    </div>
+    <div id="tp-content-wrapper" class="cc-content-parent">
+	    <div id="content_area" data-container="content"><div id="content_start"></div>
+        
+        <div id="cc-matrix-3244320612"><div id="cc-m-11818573512" class="j-module n j-text "><h1 id="cc-m-header-10432215812" class="headline cc-m-header-inline-rte" style="min-height: 42px;" data-action="header" data-name="header">
+    <span style="font-size: 24px;"><em>Frontiers of Computer Science</em> Special Column on <span style="color: #cc0000;">Smart Cities and Urban Computing</span></span>
+</h1></div><div id="cc-m-11818592812" class="j-module n j-hgrid ">    <div class="cc-m-hgrid-column" style="width: 65.45%;">
+        <div id="cc-matrix-3244330612"><div id="cc-m-11818594712" class="j-module n j-text "><p>
+    <span style="font-size: 16px;"><strong>Guest Editors:</strong></span>
+</p>
+
+<p>
+    ●<strong> Jingyuan Wang,</strong> Assistant Professor, Beihang University
+</p>
+
+<p>
+    ●<strong> Bin Guo</strong>, Professor, Northwestern Polytechnical University
+</p>
+
+<p>
+    ●<strong> Zhang Xiong</strong>, Professor, Beihang University
+</p>
+
+<p>
+    ● <strong>Yu Zheng</strong>, Vice President &amp; Chief Data Scientist, JD Finance
+</p>
+
+<p>
+     
+</p></div></div>    </div>
+            <div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+        <div class="cc-m-hgrid-column last" style="width: 32.54%;">
+        <div id="cc-matrix-3244330712"><div id="cc-m-11818594512" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/FCS_SC_UC.html">            <img src="../../assets.jimstatic.com/s/img/cc/icons/txt.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Download Citations</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">FCS_SC_UC.bib</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Text Document</span>
+                    <span class="cc-m-download-file-size">3.0 KB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/FCS_SC_UC.html" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818594512">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818594512","id":"11818594512","showpreview":false,"fileExists":true});
+// ]]>
+</script></div></div>    </div>
+    
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+
+<br class="cc-clear"/>
+
+</div><div id="cc-m-11818509312" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818545212" class="j-module n j-text "><h1 id="cc-m-header-11818508512" class="headline cc-m-header-inline-rte" style="line-height: 42px; min-height: 42px;" data-action="header" data-name="header">
+    <span style="font-size: 24px;">Perspective Urban computing: enabling urban intelligence with big data</span>
+</h1></div><div id="cc-m-11818532012" class="j-module n j-text "><p>
+    <span style="color: #000000;"><span style="font-family: 'Times New Roman', serif; font-size: 10.5pt;">Y. Zheng, “Urban computing: enabling urban intelligence with big data,”</span>
+    <strong><i style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">Frontiers of Computer Science</i></strong><span style="font-family: 'Times New Roman', serif; font-size: 10.5pt;">, vol. 11, no. 1, pp. 1–3, 2017</span></span><span style="font-size: 14px;">. <a href="https://link.springer.com/article/10.1007%2Fs11704-016-6907-2" target="_blank" title="https://link.springer.com/article/10.1007%2Fs11704-016-6907-2">Official Download</a> </span>
+</p></div><div id="cc-m-11818512212" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 193px) 193px, 100vw" id="cc-m-textwithimage-image-11818512212" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i3283c09614f4a441/version/1537876499/image.png" alt="" class="" data-src-width="823" data-src-height="1012" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i3283c09614f4a441/version/1537876499/image.png" data-image-id="7873267512"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818512212" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    <span style="text-align: justify;">Urban computing is a process of acquisition, integration and analysis of big and heterogeneous data generated by a diversity of sources in urban spaces,
+    such as sensors, devices, vehicles, buildings and humans, to tackle the major issues that cities face, e.g., air pollution, energy consumption and traffic congestion. Urban computing connects
+    unobtrusive and ubiquitous sensing technologies, advanced data management and analytics models, and novel visualization methods, to create win-win-win solutions that improve urban environment,
+    human life quality, and city operation systems. Urban computing also helps us understand the nature of urban phenomena and even predict the future of cities. Urban computing is an
+    interdisciplinary field fusing computer science and information technology with traditional city-related fields, like urban planning, transportation, civil engineering, economy, ecology, and
+    sociology, in the context of urban spaces.</span>
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818512212">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818512212,"widthEqualsContent":"0","resizeWidth":"193","resizeHeight":238},"id":11818512212});
+// ]]>
+</script></div><div id="cc-m-11818513712" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS17] Yu ZHENG SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Urban computing enabling urban intelligence with big data</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS17] Yu ZHENG SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">389.7 KB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS17] Yu ZHENG SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818513712">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818513712","id":"11818513712","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818533012" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818546612" class="j-module n j-text "><h3 id="cc-m-header-11818533112" class="headline cc-m-header-inline-rte" style="line-height: 19.6px; min-height: 19.6px; text-align: left;" data-action="header" data-name="header">
+    <span style="font-size: 22px;">An identification model of urban critical links with macroscopic fundamental diagram theory</span>
+</h3></div><div id="cc-m-11818533612" class="j-module n j-text "><p>
+    <span style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">W. Dong, Y. Wang, and H. Yu, “An identification model of urban critical links with
+    macroscopic fundamental diagram theory,”</span> <strong><i style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">Frontiers of Computer Science</i></strong><span style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">, vol. 11, no. 1, pp. 27–37, 2017. <a href="https://link.springer.com/article/10.1007/s11704-016-6080-7" target="_blank" title="https://link.springer.com/article/10.1007/s11704-016-6080-7">Official Download</a></span>
+</p></div><div id="cc-m-11818535312" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 269px) 269px, 100vw" id="cc-m-textwithimage-image-11818535312" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i55711fb1e300db88/version/1537871217/image.png" alt="" class="" data-src-width="416" data-src-height="550" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i55711fb1e300db88/version/1537871217/image.png" data-image-id="7873279812"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818535312" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    How to identify the critical links of the urban road network for actual traffic management and intelligent transportation control is an urgent problem, especially in the congestion environment.
+    Most previous methods focus on traffic static characteristics for traffic planning and design. However, actual traffic management and intelligent control need to identify relevant sections by
+    dynamic traffic information for solving the problems of variable transportation system. Therefore, a city-wide traffic model that consists of three relational algorithms, is proposed to identify
+    significant links of the road network by using macroscopic fundamental diagram (MFD) as traffic dynamic characteristics. Firstly, weighted traffic flow and density extraction algorithm is
+    provided with simulation modeling and regression analysis methods, based on MFD theory. Secondly, critical links identification algorithm is designed on the first algorithm, under specified
+    principles. Finally, threshold algorithm is developed by cluster analysis. In addition, the algorithms are analyzed and applied in the simulation experiment of the road network of the central
+    district in Hefei city, China. The results show that the model has good maneuverability and improves the shortcomings of the threshold judged by human. It provides an approach to identify
+    critical links for actual traffic management and intelligent control, and also gives a new method for evaluating the planning and design effect of the urban road network.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818535312">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818535312,"widthEqualsContent":"0","resizeWidth":"269","resizeHeight":356},"id":11818535312});
+// ]]>
+</script></div><div id="cc-m-11818538612" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS17] HaiyangYU SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">An identification model of urban critical links with macroscopic fundamental diagram theory</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS17] HaiyangYU SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">666.0 KB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS17] HaiyangYU SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818538612">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818538612","id":"11818538612","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818551112" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818551312" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Understanding bike trip patterns leveraging bike sharing system open data</strong></span>
+</p></div><div id="cc-m-11818551912" class="j-module n j-text "><p>
+    <span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 11.0pt; font-family: 'Times New Roman',serif; mso-fareast-font-family: 等线; mso-fareast-theme-font: minor-fareast; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;" xml:lang="EN-US">L. Chen, X. Ma, G. Pan, J. Jakubowicz <i>et al.</i>, “Understanding bike trip patterns leveraging bike sharing system open data,” <strong><i>Frontiers of
+    computer science</i></strong>, vol. 11, no. 1, pp. 38–48, 2017. <a href="https://link.springer.com/article/10.1007/s11704-016-6006-4" target="_blank" title="https://link.springer.com/article/10.1007/s11704-016-6006-4">Official Download</a></span>
+</p></div><div id="cc-m-11818555012" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 307px) 307px, 100vw" id="cc-m-textwithimage-image-11818555012" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ie541187696810ce7/version/1537876491/image.png" alt="" class="" data-src-width="952" data-src-height="817" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ie541187696810ce7/version/1537876491/image.png" data-image-id="7873295112"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818555012" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    Bike sharing systems are booming globally as a green and flexible transportationmode, but the flexibility also brings difficulties in keeping the bike stations balanced with enough bikes and
+    docks. Understanding the spatio-temporal bike trip patterns in a bike sharing system, such as the popular trip origins and destinations during rush hours, is important for researchers to design
+    models for bike scheduling and station management. However, due to privacy and operational concerns, bike trip data are usually not publicly available in many cities. Instead, the station feeds
+    about real-time bike and dock number in stations are usually public, which we refer to as bike sharing system open data. In this paper, we propose an approach to infer the spatio-temporal bike
+    trip patterns from the public station feeds. Since the number of possible trips (i.e., origin-destination station pairs) is much larger than the number of stations, we define the trip inference
+    as an ill-posed inverse problem. To solve this problem, we identify the sparsity and locality properties of bike trip patterns, and propose a sparse and weighted regularization model to impose
+    both properties in the solution. We evaluate our method using real-world data fromWashington, D.C. and New York City. Results show that our method can effectively infer the spatio-temporal bike
+    trip patterns and outperform the baselines in both cities.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818555012">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818555012,"widthEqualsContent":"0","resizeWidth":"307","resizeHeight":264},"id":11818555012});
+// ]]>
+</script></div><div id="cc-m-11818555112" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS17] JAKUBOWICZ SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Understanding bike trip patterns leveraging bike sharing system open data</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS17] JAKUBOWICZ SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">2.4 MB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS17] JAKUBOWICZ SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818555112">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818555112","id":"11818555112","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818555912" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818556112" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Real-time and generic queue time estimation based on mobile crowdsensing</strong></span>
+</p></div><div id="cc-m-11818556512" class="j-module n j-text "><p class="MsoNormal">
+    <span lang="EN-US" style="font-family: 'Times New Roman',serif;" xml:lang="EN-US">J. Wang, Y. Wang, D. Zhang, L. Wang, C. Chen, J. W. Lee, and Y. He, “Real-time
+    and generic queue time estimation based on mobile crowdsensing,” <strong><i>Frontiers of Computer Science</i></strong>, vol. 11, no. 1, pp. 49–60, 2017. <a href="https://link.springer.com/article/10.1007/s11704-016-5553-z" target="_blank" title="https://link.springer.com/article/10.1007/s11704-016-5553-z">Offici</a></span><span lang="EN-US" style="font-family: 'Times New Roman',serif;" xml:lang="EN-US"><a href="https://link.springer.com/article/10.1007/s11704-016-5553-z" target="_blank" title="https://link.springer.com/article/10.1007/s11704-016-5553-z">al Download</a></span>
+</p></div><div id="cc-m-11818557112" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 120px) 120px, 100vw" id="cc-m-textwithimage-image-11818557112" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i846f75a0111d57db/version/1537872877/image.png" alt="" class="" data-src-width="580" data-src-height="978" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i846f75a0111d57db/version/1537872877/image.png" data-image-id="7873296512"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818557112" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    People often have to queue for a busy service in many places around a city, and knowing the queue time can be helpful for making better activity plans to avoid long queues. Traditional solutions
+    to the queue time monitoring are based on pre-deployed infrastructures, such as cameras and infrared sensors, which are costly and fail to deliver the queue time information to scattered
+    citizens. This paper presents CrowdQTE, a mobile crowdsensing system, which utilizes the sensor-enhanced mobile devices and crowd human intelligence to monitor and provide real-time queue time
+    information for various queuing scenarios. When people are waiting in a line, we utilize the accelerometer sensor data and ambient contexts to automatically detect the queueing behavior and
+    calculate the queue time. When people are not waiting in a line, it estimates the queue time based on the information reported manually by participants. We evaluate the performance of the system
+    with a two-week and 12-person deployment using commercially-available smartphones. The results demonstrate that CrowdQTE is effective in estimating queuing status.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818557112">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818557112,"widthEqualsContent":"0","resizeWidth":"120","resizeHeight":203},"id":11818557112});
+// ]]>
+</script></div><div id="cc-m-11818558512" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS17] Daqing ZHANG SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Real-time and generic queue time estimation based on mobile crowdsensing</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS17] Daqing ZHANG SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">541.0 KB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS17] Daqing ZHANG SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818558512">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818558512","id":"11818558512","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818558912" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11837185512" class="j-module n j-header "><a name="11837185512"></a>
+<h2 class="" id="cc-m-header-11837185512">Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital footprints</h2></div><div id="cc-m-11818560212" class="j-module n j-text "><p>
+    <span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 11.0pt; font-family: 'Times New Roman',serif; mso-fareast-font-family: 等线; mso-fareast-theme-font: minor-fareast; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;" xml:lang="EN-US">C. Chen, X. Chen, Z. Wang, Y. Wang, and D. Zhang, “Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital
+    footprints,” <strong><i>Frontiers of Computer Science</i></strong>, vol. 11, no. 1, pp. 61–74, 2017. <a href="https://link.springer.com/article/10.1007/s11704-016-5550-2" target="_blank" title="https://link.springer.com/article/10.1007/s11704-016-5550-2">Official Download</a></span>
+</p></div><div id="cc-m-11818561112" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 347px) 347px, 100vw" id="cc-m-textwithimage-image-11818561112" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i9fa663ebf8213842/version/1537873011/image.png" alt="" class="" data-src-width="807" data-src-height="663" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i9fa663ebf8213842/version/1537873011/image.png" data-image-id="7873300812"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818561112" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    To facilitate the travel preparation process to a city, a lot of work has been done to recommend a POI or a sequence of POIs automatically to satisfy users’ needs. However, most of the existing
+    work ignores the issue of planning the detailed travel routes between POIs, leaving the task to online map services or commercial GPS navigators. Such a service or navigator in terms of
+    suggesting the shortest travel distance or time, which cannot meet the diverse requirements of users. For instance, in the case of traveling by driving for leisure purpose, the scenic view along
+    the travel routes would be of great importance to users, and a good planning service should put the sceneries of the route in higher priority rather than the distance or time taken. To this end,
+    in this paper, we propose a novel framework called ScenicPlanner for route recommendation, leveraging a combination of geotagged image and check-in digital footprints from locationbased social
+    networks (LBSNs). First, we enrich the road network and assign a proper scenic view score to each road segment to model the scenic road network, by extracting relevant information from geo-tagged
+    images and check-ins. Then, we apply heuristic algorithms to iteratively add road segment and determine the travelling order of added road segments with the objective of maximizing the total
+    scenic view score while satisfying the user-specified constraints (i.e., origin, destination and the total travel distance). Finally, to validate the efficiency and effectiveness of the proposed
+    framework, we conduct extensive experiments on three real-world data sets from the Bay Area in the city of San Francisco, which contain a road network crawled from OpenStreetMap, more than 31 000
+    geo-tagged images generated by 1 571 Flickr users in one year, and 110 214 check-ins left by 15 680 Foursquare users in six months.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818561112">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818561112,"widthEqualsContent":"0","resizeWidth":"347","resizeHeight":286},"id":11818561112});
+// ]]>
+</script></div><div id="cc-m-11818562412" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS17] Chao CHEN SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Scenicplanner: planning scenic travel routes leveraging heterogeneous user-generated digital footprints</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS17] Chao CHEN SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">1.0 MB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS17] Chao CHEN SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818562412">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818562412","id":"11818562412","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818563112" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818563212" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Online clustering of streaming trajectories</strong></span>
+</p></div><div id="cc-m-11818563312" class="j-module n j-text "><p>
+     <span style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">J. Mao, Q. Song, C. Jin, Z. Zhang, and A. Zhou, “Online clustering of
+    streaming trajectories,”</span> <strong><i style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">Frontiers of Computer Science</i></strong><span style="font-family: 'Times New Roman', serif; font-size: 10.5pt; color: #333333;">, vol. 12, no. 2, pp. 245–263, 2018.</span><a href="https://link.springer.com/article/10.1007/s11704-017-6325-0" target="_blank" title="https://link.springer.com/article/10.1007/s11704-017-6325-0">Official Download</a>
+</p></div><div id="cc-m-11818565012" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 212px) 212px, 100vw" id="cc-m-textwithimage-image-11818565012" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ibff978641ec23b9a/version/1537873823/image.png" alt="" class="" data-src-width="700" data-src-height="714" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ibff978641ec23b9a/version/1537873823/image.png" data-image-id="7873304812"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818565012" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    With the increasing availability of modern mobile devices and location acquisition technologies, massive trajectory data of moving objects are collected continuously in a streaming manner.
+    Clustering streaming trajectories facilitates finding the representative paths or common moving trends shared by different objects in real time. Although data stream clustering has been studied
+    extensively in the past decade, little effort has been devoted to dealing with streaming trajectories. The main challenge lies in the strict space and time complexities of processing the
+    continuously arriving trajectory data, combined with the difficulty of concept drift. To address this issue, we present two novel synopsis structures to extract the clustering characteristics of
+    trajectories, and develop an incremental algorithm for the online clustering of streaming trajectories (called OCluST). It contains a micro-clustering component to cluster and summarize the most
+    recent sets of trajectory line segments at each time instant, and a macro-clustering component to build large macro-clusters based on micro-clusters over a specified time horizon. Finally, we
+    conduct extensive experiments on four real data sets to evaluate the effectiveness and efficiency of OCluST, and compare it with other congeneric algorithms. Experimental results show that OCluST
+    can achieve superior peformance in clustering streaming trajectories.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818565012">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818565012,"widthEqualsContent":"0","resizeWidth":"212","resizeHeight":217},"id":11818565012});
+// ]]>
+</script></div><div id="cc-m-11818568612" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS18] Jiali MAO SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Online clustering of streaming trajectories</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS18] Jiali MAO SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">1.5 MB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS18] Jiali MAO SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818568612">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818568612","id":"11818568612","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818570412" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818570712" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Mobile crowd sensing task optimal allocation: a mobility pattern matching perspective</strong></span>
+</p></div><div id="cc-m-11818571012" class="j-module n j-text "><p>
+    <span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 11.0pt; font-family: 'Times New Roman',serif; mso-fareast-font-family: 等线; mso-fareast-theme-font: minor-fareast; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;" xml:lang="EN-US">L. Wang, Z. Yu, B. Guo, F. Yi, and F. Xiong, “Mobile crowd sensing task optimal allocation: a mobility pattern matching perspective,”
+    <strong><i>Frontiers of Computer Science</i></strong>, vol. 12, no. 2, pp. 231–244, 2018. <a href="https://link.springer.com/article/10.1007/s11704-017-7024-6" target="_blank" title="https://link.springer.com/article/10.1007/s11704-017-7024-6">Official Download</a></span>
+</p></div><div id="cc-m-11818571812" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 287px) 287px, 100vw" id="cc-m-textwithimage-image-11818571812" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/id67cf361c7beec2e/version/1537876479/image.png" alt="" class="" data-src-width="803" data-src-height="652" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/id67cf361c7beec2e/version/1537876479/image.png" data-image-id="7873310312"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818571812" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    With the proliferation of sensor-equipped portable mobile devices, Mobile CrowdSensing (MCS) using smart devices provides unprecedented opportunities for collecting enormous surrounding data. In
+    MCS applications, a crucial issue is how to recruit appropriate participants from a pool of available users to accomplish released tasks, satisfying both resource efficiency and sensing quality.
+    In ordern to meet these two optimization goals simultaneously, in this paper, we present a novel MCS task allocation framework by aligning existing task sequence with users’ moving regularity as
+    much as possible. Based on the process of mobility repetitive pattern discovery, the original task allocation problem is converted into a pattern matching issue, and the involved optimization
+    goals are transformed into pattern matching length and support degree indicators. To determine a trade-off between these two competitive metrics, we propose greedybased optimal assignment scheme
+    search approaches, namely MLP, MDP, IU1 and IU2 algorithm, with respect to matching length-preferred, support degree-preferred and integrated utility, respectively. Comprehensive experiments on
+    realworld open data set and synthetic data set clearly validate the effectiveness of our proposed framework on MCS task optimal allocation.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818571812">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818571812,"widthEqualsContent":"0","resizeWidth":"287","resizeHeight":234},"id":11818571812});
+// ]]>
+</script></div><div id="cc-m-11818572912" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS18] Liang WANG SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Mobile crowd sensing task optimal allocation: a mobility pattern matching perspective</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS18] Liang WANG SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">634.9 KB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS18] Liang WANG SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818572912">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818572912","id":"11818572912","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818573212" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818574612" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Integrating GPS trajectory and topics from Twitter stream for human mobility estimation</strong></span>
+</p></div><div id="cc-m-11818576112" class="j-module n j-text "><p class="MsoNormal">
+    <span lang="EN-US" style="font-family: 'Times New Roman',serif;" xml:lang="EN-US">S. Miyazawa, X. Song, T. Xia, R. Shibasaki, and H. Kaneda, “Integrating gps trajectory
+    and topics from twitter stream for human mobility estimation,” <strong><i>Frontiers of Computer Science</i></strong>, pp. 1–11. <a href="https://link.springer.com/article/10.1007/s11704-017-6464-3" target="_blank" title="https://link.springer.com/article/10.1007/s11704-017-6464-3">Official Download</a></span>
+</p></div><div id="cc-m-11818577912" class="j-module n j-text "><p style="text-align: justify;">
+    Understanding urban dynamics and large-scale human mobility will play a vital role in building smart cities and sustainable urbanization. Existing research in this domain mainly focuses on a
+    single data source (e.g., GPS data, CDR data, etc.). In this study, we collect big and heterogeneous data and aim to investigate and discover the relationship between spatiotemporal topics found
+    in geo-tagged tweets and GPS traces from smartphones. We employ Latent Dirichlet Allocation-based topic modeling on geo-tagged tweets to extract and classify the topics. Then the extracted topics
+    from tweets and temporal population distribution from GPS traces are jointly used to model urban dynamics and human crowd flow. The experimental results and validations demonstrate the efficiency
+    of our approach and suggest that the fusion of cross-domain data for urban dynamics modeling is more practical than previously thought.
+</p></div><div id="cc-m-11818578212" class="j-module n j-imageSubtitle "><figure class="cc-imagewrapper cc-m-image-align-3">
+<img sizes="(min-width: 632px) 632px, 100vw" id="cc-m-imagesubtitle-image-11818578212" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ie700ab7dd6a6e659/version/1537875383/image.png" alt="" class="" data-src-width="920" data-src-height="305" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ie700ab7dd6a6e659/version/1537875383/image.png" data-image-id="7873312912"/>    
+
+</figure>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818578212">// <![CDATA[
+
+    window.regModule("module_imageSubtitle", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818578212,"widthEqualsContent":"0","resizeWidth":"632","resizeHeight":210},"id":11818578212});
+// ]]>
+</script></div><div id="cc-m-11818576212" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS-online] Satoshi MIYAZAWA SC&UC.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Integrating GPS trajectory and topics from Twitter stream for human mobility estimation</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS-online] Satoshi MIYAZAWA SC&amp;UC.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">3.6 MB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS-online] Satoshi MIYAZAWA SC&UC.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818576212">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818576212","id":"11818576212","showpreview":true,"fileExists":true});
+// ]]>
+</script></div><div id="cc-m-11818582312" class="j-module n j-hr ">    <div class="hr"></div>
+</div><div id="cc-m-11818581412" class="j-module n j-text "><p>
+    <span style="font-size: 22px;"><strong>Popular Route Planning with Travel Cost Estimation from Trajectories</strong></span>
+</p></div><div id="cc-m-11818582412" class="j-module n j-text "><p>
+    <span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 11.0pt; font-family: 'Times New Roman',serif; mso-fareast-font-family: 等线; mso-fareast-theme-font: minor-fareast; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;" xml:lang="EN-US">H. LIU, C. JIN, and A. ZHOU, “Popular route planning with travel cost estimation from trajectories,” <strong><i>Frontiers of Computer Science</i></strong>, Just
+    Accepted <a href="http://xn--journal-kka.hep.com.cn/­fcs/­EN/­abstract/­article_21811.shtml" target="_blank" title="http://­journal.hep.com.cn/­fcs/­EN/­abstract/­article_21811.shtml">Official
+    Download</a></span>
+</p></div><div id="cc-m-11818583412" class="j-module n j-textWithImage "><figure class="cc-imagewrapper cc-m-image-align-1">
+<img sizes="(min-width: 174px) 174px, 100vw" id="cc-m-textwithimage-image-11818583412" src="../../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ib88dc7f3eee7abcb/version/1537876119/image.png" alt="" class="" data-src-width="576" data-src-height="931" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/ib88dc7f3eee7abcb/version/1537876119/image.png" data-image-id="7873316912"/>    
+
+</figure>
+<div>
+    <div id="cc-m-textwithimage-11818583412" data-name="text" data-action="text" class="cc-m-textwithimage-inline-rte">
+        <p style="text-align: justify;">
+    With the increasing number of GPS-equipped vehicles, more and more trajectories are generated continuously, based on which some urban applications become feasible, such as route planning. In
+    general, popular route that has been travelled frequently is a good choice, especially for people who are not familiar with the road networks. Moreover, accurate estimation of the travel cost
+    (such as travel time, travel fee and fuel consumption) will benefit a well scheduled trip plan. In this paper, we address this issue by finding the popular route with travel cost estimation. To
+    this end, we design a system consists of three main components. First, we propose a novel structure, called popular traverse graph where each node is a popular location and each edge is a popular
+    route between locations, to summarize historical trajectories without road network information. Second, we propose a self-adaptive method to model the travel cost on each popular route at
+    different time interval, so that each time interval has a stable travel cost. Finally, based on the graph, given a query consists of source, destination and leaving time, we devise an efficient
+    route planning algorithm which considers optimal route concatenation to search the popular route from source to destination at the leaving time with accurate travel cost estimation. Moreover, we
+    conduct comprehensive experiments and implement our system by a mobile App, the results show that our method is both effective and efficient.
+</p>    </div>
+</div>
+
+<div class="cc-clear"></div>
+<script id="cc-m-reg-11818583412">// <![CDATA[
+
+    window.regModule("module_textWithImage", {"data":{"imageExists":true,"hyperlink":"","hyperlink_target":"","hyperlinkAsString":"","pinterest":"0","id":11818583412,"widthEqualsContent":"0","resizeWidth":"174","resizeHeight":282},"id":11818583412});
+// ]]>
+</script></div><div id="cc-m-11818583712" class="j-module n j-downloadDocument "><div class="clearover">
+    <div class="leftDownload">
+        
+        <a class="j-m-dowload" href="../../downloads/[FCS-JA] Aoying ZHOU.pdf">            <img src="../../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51" height="51" class="downloadImage" alt="Download"/>
+                </a>
+            </div>
+    
+    <div data-name="download-description" class="rightDownload">
+                    <div class="cc-m-download-title">Popular route planning with travel cost estimation from trajectories</div>
+        
+        
+                    <div class="cc-m-download-file">
+                <div class="cc-m-download-file-name">[FCS-JA] Aoying ZHOU.pdf</div>
+                <div class="cc-m-download-file-info">
+                    <span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+                    <span class="cc-m-download-file-size">1.8 MB</span>
+                </div>
+                <div class="cc-m-download-file-link"><a href="../../downloads/[FCS-JA] Aoying ZHOU.pdf" class="cc-m-download-link">Download</a></div>
+            </div>
+            </div>
+
+    
+    </div>
+<script id="cc-m-reg-11818583712">// <![CDATA[
+
+    window.regModule("module_downloadDocument", {"variant":"default","selector":"#cc-m-download-11818583712","id":"11818583712","showpreview":true,"fileExists":true});
+// ]]>
+</script></div></div>
+        
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="tp-footer">
+	    <div id="contentfooter" data-container="footer">
+
+    
+    <div class="leftrow">
+            </div>
+
+    <div class="rightrow">
+            
+    <span class="loggedout">
+        <a rel="nofollow" id="login" href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165">Log in</a>
+    </span>
+
+<span class="loggedin">
+    <a rel="nofollow" id="logout" target="_top" href="https://cms.e.jimdo.com/app/cms/logout.php">
+        Log out    </a>
+    |
+    <a rel="nofollow" id="edit" target="_top" href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=2214243112">Edit</a>
+</span>
+        </div>
+
+    <div class="jimdo-free-footer-ad "> <a class="jimdo-footer-branding pull-left" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" rel="nofollow">Jimdo</a> <p class="pull-left"> <strong>This site was created with Jimdo Creator!</strong> Sign up for free now at <a id="fallback-ad-textlink" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" class="jimdolink" rel="nofollow">https://www.jimdo.com</a> </p> </div> 
+</div>
+
+      <div class="clear"></div>
+    </div>
+  </div></div>
+    <ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+
+                    <!-- scroll to top button -->
+            <li class="cc-FloatingButtonBarContainer-button-scroll">
+                <a href="javascript:void(0);" title="Scroll to top">
+                    <span>Scroll to top</span>
+                </a>
+            </li>
+            <script>// <![CDATA[
+
+    window.regModule("common_scrolltotop", []);
+// ]]>
+</script>    </ul>
+
+<div id="loginbox" class="hidden">
+
+    <div id="loginbox-header">
+
+    <a class="cc-close" title="Close this element" href="#">Close</a>
+
+    <div class="c"></div>
+
+</div>
+
+<div id="loginbox-content">
+
+        <div id="resendpw"></div>
+
+        <div id="loginboxOuter"></div>
+    </div>
+</div>
+<div id="loginbox-darklayer" class="hidden"></div>
+<script>// <![CDATA[
+
+    window.regModule("web_login", {"url":"https:\/\/smartcity-buaa.jimdoweb.com\/","pageId":2214243112});
+// ]]>
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+
+
+</body>
+
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/special-issues/urban-computing/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Sep 2026 10:48:13 GMT -->
+</html>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/readings/sp1-5/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Sep 2026 10:48:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8"/>
+    <link rel="dns-prefetch preconnect" href="../../u.jimcdn.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../assets.jimstatic.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../image.jimcdn.com/index.html" crossorigin="anonymous"/>
+<link rel="dns-prefetch preconnect" href="../../fonts.jimstatic.com/index.html" crossorigin="anonymous"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="description" content=""/>
+<meta name="robots" content="index, follow, archive"/>
+<meta property="st:section" content=""/>
+<meta name="generator" content="Jimdo Creator"/>
+<meta name="twitter:title" content="4 研究展望"/>
+<meta name="twitter:description" content="2.3 城市计算技术 城市计算是计算机科学以城市为背景，与城市规划、交通、能源、环境、社会学和经济学等学科融合的新兴领域，城市计算技术从城市的全局着眼，通过整合、分析和应用跨行业、跨领域的城市数据，来设计更加高效的城市服务与应用系统，并希望通过这些技术的应用来实现“人—环境—城市”的三者的和谐发展[7, 47,48]。城市计算技术的核心是数据挖掘、分析与应用技术，以数据为中心的城市计算技术是构建智慧城市所必不可少的一项支撑技术。在本小节，我们从城市动态特性研究、城市功能识别与规划、附加行业应用等三个方面，介绍在城市计算领域围绕城市数据应用所取得的一些最新研究进展。 2.3.1 城市动态特征的检测与分析 如图4所示，在地理结构上一座城市可以近似的看做一个基于经纬度坐标系的二维平面空间，通过城市传感设施所获得的城市数据则可以看做对于二维城市平面空间的动态特性的时间采样。这样，按照经纬度地理位组织起来的城市数据采集设备就形成了一个随着时间变化的二维时变信号源。信号源的采样对象是城市的内在动态特性，城市的人口、交通、经济、环境等各种深层次的动态行为都会在该信号源上有所体现，不同的数据收集方式相当于采用了不同类型的传感器，任何一种城市数据都是城市的内在动态特性在某一特殊传感信号空间上的映射。例如，使用安装有GPS设备的出租车与公交车辆收集到的浮动车数据可以被理解为使用浮动车作为传感器对于整个城市的动态特性进行采样[49]，所收集到的GPS位置信息实际上是城市深层动态特性在浮动车GPS信号空间上映射。尽管浮动车的GPS数据直接表现出来的是车辆的位置、速度分布等道路交通信息，但事实上整个城市的市民生活方式、经济文化分布、城市地理结构等深层次的城市特性都会在GPS信号空间上有所反映。如果我们能够综合有效的利用信号分析、统计学习、数据挖掘等技术对浮动车GPS数据等城市感知数据进行挖掘，就可以有效的检测发现城市动态特性的内在模式和运行规律，从而改善和优化城市环境，实现城市发展与运行的智慧化。"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:url" content="index.html"/>
+<meta property="og:title" content="4 研究展望"/>
+<meta property="og:description" content="2.3 城市计算技术 城市计算是计算机科学以城市为背景，与城市规划、交通、能源、环境、社会学和经济学等学科融合的新兴领域，城市计算技术从城市的全局着眼，通过整合、分析和应用跨行业、跨领域的城市数据，来设计更加高效的城市服务与应用系统，并希望通过这些技术的应用来实现“人—环境—城市”的三者的和谐发展[7, 47,48]。城市计算技术的核心是数据挖掘、分析与应用技术，以数据为中心的城市计算技术是构建智慧城市所必不可少的一项支撑技术。在本小节，我们从城市动态特性研究、城市功能识别与规划、附加行业应用等三个方面，介绍在城市计算领域围绕城市数据应用所取得的一些最新研究进展。 2.3.1 城市动态特征的检测与分析 如图4所示，在地理结构上一座城市可以近似的看做一个基于经纬度坐标系的二维平面空间，通过城市传感设施所获得的城市数据则可以看做对于二维城市平面空间的动态特性的时间采样。这样，按照经纬度地理位组织起来的城市数据采集设备就形成了一个随着时间变化的二维时变信号源。信号源的采样对象是城市的内在动态特性，城市的人口、交通、经济、环境等各种深层次的动态行为都会在该信号源上有所体现，不同的数据收集方式相当于采用了不同类型的传感器，任何一种城市数据都是城市的内在动态特性在某一特殊传感信号空间上的映射。例如，使用安装有GPS设备的出租车与公交车辆收集到的浮动车数据可以被理解为使用浮动车作为传感器对于整个城市的动态特性进行采样[49]，所收集到的GPS位置信息实际上是城市深层动态特性在浮动车GPS信号空间上映射。尽管浮动车的GPS数据直接表现出来的是车辆的位置、速度分布等道路交通信息，但事实上整个城市的市民生活方式、经济文化分布、城市地理结构等深层次的城市特性都会在GPS信号空间上有所反映。如果我们能够综合有效的利用信号分析、统计学习、数据挖掘等技术对浮动车GPS数据等城市感知数据进行挖掘，就可以有效的检测发现城市动态特性的内在模式和运行规律，从而改善和优化城市环境，实现城市发展与运行的智慧化。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Beihang Interest Group on SmartCity (BIGSCity)"/><title>4 研究展望 - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link rel="shortcut icon" href="../../assets.jimstatic.com/s/img/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml" title="Blog" href="../../rss/blog"/>    
+<link rel="canonical" href="index.html"/>
+
+        <script src="../../assets.jimstatic.com/ckies.js.c52961c41c57a9b4f804.js"></script>
+
+        <script src="../../assets.jimstatic.com/cookieControl.js.0c7250f3957d0aebc70e.js"></script>
+    <script>window.CookieControlSet.setToOff();</script>
+
+    <style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+
+        <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/maina05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_main_css"/>
+    <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/layout3417.css?t=1539927490" rel="stylesheet" type="text/css" id="jimdo_layout_css"/>
+    <link href="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/layout/lefdf599db517bce3/css/fonta05d.css?t=1788420789" rel="stylesheet" type="text/css" id="jimdo_font_css"/>
+<script>     /* <![CDATA[ */     /*!  loadCss [c]2014 @scottjehl, Filament Group, Inc.  Licensed MIT */     window.loadCSS = window.loadCss = function(e,n,t){var r,l=window.document,a=l.createElement("link");if(n)r=n;else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=i[i.length-1]}var o=l.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",r.parentNode.insertBefore(a,n?r:r.nextSibling);var d=function(e){for(var n=a.href,t=o.length;t--;)if(o[t].href===n)return e.call(a);setTimeout(function(){d(e)})};return a.onloadcssdefined=d,d(function(){a.media=t||"all"}),a};     window.onloadCSS = function(n,o){n.onload=function(){n.onload=null,o&&o.call(n)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in n&&n.onloadcssdefined(o)}     /* ]]> */ </script>     <script>
+// <![CDATA[
+onloadCSS(loadCss('../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css') , function() {
+    this.id = 'jimdo_web_css';
+});
+// ]]>
+</script>
+<link href="../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload" as="style"/>
+<noscript>
+<link href="../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="stylesheet"/>
+</noscript>
+    <script>
+    //<![CDATA[
+        var jimdoData = {"isTestserver":false,"isLcJimdoCom":false,"isJimdoHelpCenter":false,"isProtectedPage":false,"cstok":"127e8c97199c0f29c352ace05b7cf4086b3aa0d4","cacheJsKey":"8a51e987d851b80834ca79046af3ea86483cf5c2","cacheCssKey":"8a51e987d851b80834ca79046af3ea86483cf5c2","cdnUrl":"https:\/\/assets.jimstatic.com\/","minUrl":"https:\/\/assets.jimstatic.com\/app\/cdn\/min\/file\/","authUrl":"https:\/\/a.jimdo.com\/","webPath":"https:\/\/smartcity-buaa.jimdoweb.com\/","appUrl":"https:\/\/a.jimdo.com\/","cmsLanguage":"en_US","isFreePackage":true,"mobile":false,"isDevkitTemplateUsed":false,"isTemplateResponsive":false,"websiteId":"saf8fe3b8eb300165","pageId":1436538487,"packageId":1,"shop":{"deliveryTimeTexts":{"1":"Ships within 1-3 days","2":"Ships within 3-5 days","3":"Delivery in 5-8 days"},"checkoutButtonText":"Check out","isReady":false,"currencyFormat":{"pattern":"\u00a4#,##0.00","convertedPattern":"$#,##0.00","symbols":{"GROUPING_SEPARATOR":",","DECIMAL_SEPARATOR":".","CURRENCY_SYMBOL":"\u00a5"}},"currencyLocale":"zh_CN"},"tr":{"gmap":{"searchNotFound":"The entered address doesn't exist or couldn't be found.","routeNotFound":"The driving directions couldn't be determined. Possible reasons: The starting address is not specific enough or it is too far from the destination address."},"shop":{"checkoutSubmit":{"next":"Next step","wait":"Please wait"},"paypalError":"An error has occurred. Please try again!","cartBar":"Go to Shopping Cart","maintenance":"Sorry, this store is not available at the moment. Please try again later.","addToCartOverlay":{"productInsertedText":"This item was added to your cart.","continueShoppingText":"Continue shopping","reloadPageText":"Refresh"},"notReadyText":"This store has not been completely set up.","numLeftText":"There are not more than {:num} of this item available at this time.","oneLeftText":"There is only one more of this item available."},"common":{"timeout":"Oops, it looks like there's been an error on our end and your last change didn't go through. Please try again in a minute. "},"form":{"badRequest":"An error has occurred! This form could not be submitted. Please try again later."}},"jQuery":"jimdoGen002","isJimdoMobileApp":false,"bgConfig":null,"bgFullscreen":null,"responsiveBreakpointLandscape":767,"responsiveBreakpointPortrait":480,"copyableHeadlineLinks":false,"tocGeneration":false,"googlemapsConsoleKey":false,"loggingForAnalytics":false,"loggingForPredefinedPages":false,"isFacebookPixelIdEnabled":false,"userAccountId":"b43d6bb0-ab82-46ea-a803-0df876a39e06"};
+    // ]]>
+</script>
+
+     <script> (function(window) { 'use strict'; var regBuff = window.__regModuleBuffer = []; var regModuleBuffer = function() { var args = [].slice.call(arguments); regBuff.push(args); }; if (!window.regModule) { window.regModule = regModuleBuffer; } })(window); </script>
+    <script src="../../assets.jimstatic.com/web.js.c8bf0a2e470c2b3ec6fd.js" async="true"></script>
+    <script src="../../assets.jimstatic.com/at.js.619d00f8aa071522cb43.js"></script>
+    
+
+
+
+</head>
+
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-1436538487">
+
+<div id="cc-inner" class="cc-content-parent">  <div id="tp-container" class="cc-content-parent">
+    <div id="tp-sidebar-wrapper">
+	    <div id="tp-emotion">
+        
+<div id="emotion-header" data-action="emoHeader" style="background: #FFFFFF;width: 200px; height: 198px;">
+            <a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+    
+    <img src="../../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941" id="emotion-header-img" alt=""/>
+
+
+
+    
+
+
+    <strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+            </a>
+        </div>
+
+
+      </div>
+      <div id="tp-navigation-wrapper">
+        <div data-container="navigation"><div class="j-nav-variant-standard">
+<ul id="mainNav1" class="mainNav1">
+<li id="cc-nav-view-1436096687"><a href="../../index.html" class="level_1"><span>Home</span></a></li>
+<li id="cc-nav-view-1436096787"><a href="../../jingyuan-wang/index.html" class="level_1"><span>Jingyuan Wang</span></a></li>
+<li id="cc-nav-view-2222426012"><a href="../../publications/index.html" class="level_1"><span>Publications</span></a></li>
+<li id="cc-nav-view-2221018512"><a href="../../students-alumni/index.html" class="level_1"><span>Students &amp; Alumni</span></a></li>
+<li id="cc-nav-view-2232851312"><a href="../../libcity/index.html" class="level_1"><span>LibCity</span></a></li>
+<li id="cc-nav-view-1436540387"><a href="../../visualizations/index.html" class="level_1"><span>Visualizations</span></a></li>
+<li id="cc-nav-view-2257750712"><a href="../../seminars/index.html" class="level_1"><span>Seminars</span></a></li>
+<li id="cc-nav-view-1436537587"><a href="../../readings/index.html" class="level_1"><span>Readings</span></a></li>
+<li id="cc-nav-view-1436095287"><a href="../../contact-us/index.html" class="level_1"><span>Contact Us</span></a></li>
+</ul>
+</div></div>
+     </div>
+      <div id="tp-sidebar">
+        <div data-container="sidebar"><div id="cc-matrix-1765328887"><div id="cc-m-7369283887" class="j-module n j-htmlCode "><script type="text/javascript" id="clustrmaps" src="../../cdn.clustrmaps.com/map_v241bd.js?cl=080808&amp;w=a&amp;t=n&amp;d=ev8GjzBkQ5gpMEUCQubC8uFtQPm3DF_TkLDEUxyQdXA&amp;co=ffffff&amp;ct=808080&amp;cmo=3acc3a&amp;cmn=ff5353"></script></div><div id="cc-m-11752886712" class="j-module n j-hgrid ">    <div class="cc-m-hgrid-column" style="width: 49%;">
+        <div id="cc-matrix-3232397312"><div id="cc-m-11752886812" class="j-module n j-text "><p>
+    Current Visitors:
+</p></div></div>    </div>
+            <div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+        <div class="cc-m-hgrid-column last" style="width: 49%;">
+        <div id="cc-matrix-3232397412"><div id="cc-m-11752887012" class="j-module n j-htmlCode "><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=9846202; 
+var sc_invisible=0; 
+var sc_security="d55beb08"; 
+var sc_https=1; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+//]]>
+</script> <noscript>
+<div class="statcounter">
+    <a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/9846202/0/d55beb08/0/" alt="Web Analytics"/></a>
+</div></noscript> <!-- End of Statcounter Code --></div></div>    </div>
+    
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+
+<br class="cc-clear"/>
+
+</div></div></div>
+      </div>
+    </div>
+    <div id="tp-content-wrapper" class="cc-content-parent">
+	    <div id="content_area" data-container="content"><div id="content_start"></div>
+        
+        <div id="cc-matrix-1766118687"><div id="cc-m-7369531787" class="j-module n j-text "><p>
+    <!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+</p>
+
+<ul>
+    <li>
+        <h3 style="margin-top: 6.0pt; margin-right: 0cm; margin-bottom: .0001pt; margin-left: 21.85pt; mso-para-margin-top: .5gd; mso-para-margin-right: 0cm; mso-para-margin-bottom: .0001pt; mso-para-margin-left: 21.85pt; text-indent: -21.85pt; mso-char-indent-count: -2.08; line-height: normal; mso-list: l0 level2 lfo1;">
+        <strong><span style="font-size: 20px;"><span lang="EN-US" xml:lang="EN-US">2.3 <span style="font-family: 'Times New Roman'; font-style: normal; font-variant: normal; line-height: normal; font-size-adjust: none; font-stretch: normal; -moz-font-feature-settings: normal; -moz-font-language-override: normal;">
+                </span></span> <span style="font-family: 黑体;">城市计算技术</span></span></strong>
+        </h3>
+    </li>
+</ul>
+
+<p style="text-align: justify;">
+     
+</p>
+
+<p style="text-align: justify;">
+           <span style="font-size: 16px;"><span style="font-family: 宋体;">城市计算是计算机科学以城市为背景，与城市规划、交通、能源、环境、社会学和经济学等学科融合的新兴领域，城市计算技术从城市的全局着眼，通过整合、分析和应用跨行业、跨领域的城市数据，来设计更加高效的城市服务与应用系统，并希望通过这些技术的应用来实现</span><span style="font-family: 'Times New Roman','serif';" lang="EN-US" xml:lang="EN-US">“</span><span style="font-family: 宋体;">人</span><span style="font-family: 'Times New Roman','serif';" lang="EN-US" xml:lang="EN-US">—</span><span style="font-family: 宋体;">环境</span><span style="font-family: 'Times New Roman','serif';" lang="EN-US" xml:lang="EN-US">—</span><span style="font-family: 宋体;">城市</span><span style="font-family: 'Times New Roman','serif';" lang="EN-US" xml:lang="EN-US">”</span><span style="font-family: 宋体;">的三者的和谐发展</span><sup><span style="font-family: 'Times New Roman','serif';" lang="EN-US" xml:lang="EN-US">[7, 47,48]</span></sup><span style="font-family: 宋体;">。城市计算技术的核心是数据挖掘、分析与应用技术，以数据为中心的城市计算技术是构建智慧城市所必不可少的一项支撑技术。在本小节，我们从城市动态特性研究、城市功能识别与规划、附加行业应用等三个方面，介绍在城市计算领域围绕城市数据应用所取得的一些最新研究进展。</span></span>
+</p>
+
+<p style="text-align: justify;">
+    <span style="font-size: 10.5pt; mso-bidi-font-size: 12.0pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+     </span>
+</p>
+
+<ul>
+    <li>
+        <strong><span style="font-size: 16px;"><span style="font-family: 黑体;">2.3.1  城市动态特征的检测与分析</span></span></strong>
+    </li>
+</ul>
+
+<p>
+    <span style="font-family: 黑体;"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="=="/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+        {mso-style-name:普通表格;
+        mso-tstyle-rowband-size:0;
+        mso-tstyle-colband-size:0;
+        mso-style-noshow:yes;
+        mso-style-priority:99;
+        mso-style-qformat:yes;
+        mso-style-parent:"";
+        mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+        mso-para-margin:0cm;
+        mso-para-margin-bottom:.0001pt;
+        mso-pagination:widow-orphan;
+        font-size:10.0pt;
+        font-family:"Times New Roman","serif";}
+</style>
+<![endif]--></span>
+</p>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-size: 16px;"><span style="font-family: 宋体;">如图</span><span lang="EN-US" xml:lang="EN-US">4</span><span style="font-family: 宋体;">所示，在地理结构上一座城市可以近似的看做一个基于经纬度坐标系的二维平面空间，通过城市传感设施所获得的城市数据则可以看做对于二维城市平面空间的动态特性的时间采样。这样，按照经纬度地理位组织起来的城市数据采集设备就形成了一个随着时间变化的二维时变信号源。信号源的采样对象是城市的内在动态特性，城市的人口、交通、经济、环境等各种深层次的动态行为都会在该信号源上有所体现，不同的数据收集方式相当于采用了不同类型的传感器，任何一种城市数据都是城市的内在动态特性在某一特殊传感信号空间上的映射。例如，使用安装有</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">设备的出租车与公交车辆收集到的浮动车数据可以被理解为使用浮动车作为传感器对于整个城市的动态特性进行采样</span><sup><span lang="EN-US" xml:lang="EN-US">[49]</span></sup><span style="font-family: 宋体;">，所收集到的</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">位置信息实际上是城市深层动态特性在浮动车</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">信号空间上映射。尽管浮动车的</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">数据直接表现出来的是车辆的位置、速度分布等道路交通信息，但事实上整个城市的市民生活方式、经济文化分布、城市地理结构等深层次的城市特性都会在</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">信号空间上有所反映。如果我们能够综合有效的利用信号分析、统计学习、数据挖掘等技术对浮动车</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">数据等城市感知数据进行挖掘，就可以有效的检测发现城市动态特性的内在模式和运行规律，从而改善和优化城市环境，实现城市发展与运行的智慧化。</span></span>
+</p>
+
+<p style="text-align: justify;">
+    <span style="font-size: 16px;"> </span>
+</p></div><div id="cc-m-7369565887" class="j-module n j-header "><a name="7369565887"></a>
+<h1 class="" id="cc-m-header-7369565887">4	研究展望</h1></div><div id="cc-m-7369565387" class="j-module n j-text "><p>
+    <!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+</p>
+
+<p>
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="=="/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+        {mso-style-name:普通表格;
+        mso-tstyle-rowband-size:0;
+        mso-tstyle-colband-size:0;
+        mso-style-noshow:yes;
+        mso-style-priority:99;
+        mso-style-qformat:yes;
+        mso-style-parent:"";
+        mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+        mso-para-margin:0cm;
+        mso-para-margin-bottom:.0001pt;
+        mso-pagination:widow-orphan;
+        font-size:10.0pt;
+        font-family:"Times New Roman","serif";}
+</style>
+<![endif]-->
+</p>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-family: 宋体; font-size: 16px;">学术界和工业界围绕着以数据为中心的智慧城市这一主题展开了多层次、多视角、多方位的理论与技术探索，并取得了令人瞩目的研究成果。然而，构建和谐宜居的智慧城市系统，实现人与环境、人与城市和谐发展的智慧城市愿景，依然存在有诸多挑战，这些挑战需要多学科、多领域的研究人员们相互配合、凝聚智慧、共同面对。在这里，我们对未来在以数据为中心的智慧城市领域可能有所突破的研究方向和臻待突破的研究问题进行展望。</span>
+</p>
+
+<ul>
+    <li>
+        <span style="font-size: 16px;"><strong style="mso-bidi-font-weight: normal;">多源城市数据的紧耦合</strong></span>
+    </li>
+</ul>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-size: 16px;"><span style="font-family: 宋体;">城市是一个复杂的、庞大的复杂动态系统，其任何一方面的动态特性都会在不同的数据空间中有所体现。现有的智慧城市研究工作往往只能利用到城市数据空间中的一两种数据，即使是多源数据融合的研究工作也往往是某一类数据为核心，加之地图</span><span lang="EN-US" xml:lang="EN-US">\POI</span><span style="font-family: 宋体;">等城市</span><span lang="EN-US" xml:lang="EN-US">GIS</span><span style="font-family: 宋体;">锚定数据做支撑，例如：出租车</span><span lang="EN-US" xml:lang="EN-US">GPS</span><span style="font-family: 宋体;">数据</span><span lang="EN-US" xml:lang="EN-US">+</span><span style="font-family: 宋体;">地图</span><span lang="EN-US" xml:lang="EN-US">\POI</span><span style="font-family: 宋体;">数据等。多源数据的耦合度并不高，利用模式也相对单一。如何充分挖掘城市核心数据的关联性，实现多源数据之间的紧耦合，将会是未来智慧城市数据应用技术发展的必然趋势。</span></span>
+</p>
+
+<ul>
+    <li>
+        <span style="font-size: 16px;"><strong style="mso-bidi-font-weight: normal;">信息世界</strong><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US">-</span></strong><strong style="mso-bidi-font-weight: normal;"><span style="font-family: 宋体;">物理世界的交互</span></strong></span>
+    </li>
+</ul>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-family: 宋体; font-size: 16px;">开展智慧城市技术研究的根本目的是为了服务城市与市民，即将信息空间的智慧应用到真实的物理世界当中。同时，应用了智慧城市新技术的物理世界也会发生变化，并在信息空间中有所反映，研究人员还需要根据这些反馈进一步的改进技术。这种信息世界同物理世界的交互过程将不断的迭代进行，并且逐步实现自主演化，最终构成一个具有自我改进能力的反馈系统。目前业界还没有太多相关工作的报道，但相信不久的将来，物理世界与信息世界的交互研究将会成为智慧城市研究的一个重要方向。</span>
+</p>
+
+<ul>
+    <li>
+        <span style="font-size: 16px;"><strong><span style="font-family: Wingdings;" lang="EN-US" xml:lang="EN-US"> </span><span style="font-family: 宋体;">城市深层次数据的利用</span></strong></span>
+    </li>
+</ul>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-family: 宋体; font-size: 16px;">城市的运行过程涵盖了交通、经济、社会、物流等多层次、多方面的社会活动。现有研究工作所采用的地图数据、交通数据、通讯数据、环境数据等都只是反映了城市活动的物理与信息接触行为，并且均是以地理位置坐标进行锚定标注的。对于一些深层次的城市逻辑行为，例如资金流动、政策导向、社会心理、流行时尚等，现有研究工作都少有涉及。开发利用城市深层次数据，挖掘城市运行的内在逻辑关系，将会是智慧城市技术发展的未来方向之一。</span>
+</p>
+
+<ul>
+    <li>
+        <span style="font-size: 16px;"><strong style="mso-bidi-font-weight: normal;">城市行为动力学理论体系</strong></span>
+    </li>
+</ul>
+
+<p class="MsoNormal" style="text-indent: 21.0pt; mso-char-indent-count: 2.0; mso-layout-grid-align: none; text-autospace: none;">
+    <span style="font-family: 宋体; font-size: 16px;">城市行为动力学是理解城市内在行为与市民活动规律的基础理论，其在整个智慧城市研究的理论体系当中扮演者非常重要的角色。目前的城市行为动力学理论研究，还只是依附于人类活动时空动力学的一个统计物理学分支，尚没有形成完整的理论体系，具体内涵与外延边界也尚不清晰。因此，未来完善和发展系统的城市行为动力学理论，构建完整独立的理论体系，将会是智慧城市基础理论研究的核心任务。</span>
+</p></div></div>
+        
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="tp-footer">
+	    <div id="contentfooter" data-container="footer">
+
+    
+    <div class="leftrow">
+            </div>
+
+    <div class="rightrow">
+            
+    <span class="loggedout">
+        <a rel="nofollow" id="login" href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165">Log in</a>
+    </span>
+
+<span class="loggedin">
+    <a rel="nofollow" id="logout" target="_top" href="https://cms.e.jimdo.com/app/cms/logout.php">
+        Log out    </a>
+    |
+    <a rel="nofollow" id="edit" target="_top" href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=1436538487">Edit</a>
+</span>
+        </div>
+
+    <div class="jimdo-free-footer-ad "> <a class="jimdo-footer-branding pull-left" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" rel="nofollow">Jimdo</a> <p class="pull-left"> <strong>This site was created with Jimdo Creator!</strong> Sign up for free now at <a id="fallback-ad-textlink" href="https://www.jimdo.com/?utm_source=cre-smartcity-buaa&amp;utm_medium=footer%20ad&amp;utm_campaign=ownads%20webview" class="jimdolink" rel="nofollow">https://www.jimdo.com</a> </p> </div> 
+</div>
+
+      <div class="clear"></div>
+    </div>
+  </div></div>
+    <ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+
+                    <!-- scroll to top button -->
+            <li class="cc-FloatingButtonBarContainer-button-scroll">
+                <a href="javascript:void(0);" title="Scroll to top">
+                    <span>Scroll to top</span>
+                </a>
+            </li>
+            <script>// <![CDATA[
+
+    window.regModule("common_scrolltotop", []);
+// ]]>
+</script>    </ul>
+
+<div id="loginbox" class="hidden">
+
+    <div id="loginbox-header">
+
+    <a class="cc-close" title="Close this element" href="#">Close</a>
+
+    <div class="c"></div>
+
+</div>
+
+<div id="loginbox-content">
+
+        <div id="resendpw"></div>
+
+        <div id="loginboxOuter"></div>
+    </div>
+</div>
+<div id="loginbox-darklayer" class="hidden"></div>
+<script>// <![CDATA[
+
+    window.regModule("web_login", {"url":"https:\/\/smartcity-buaa.jimdoweb.com\/","pageId":1436538487});
+// ]]>
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+
+
+</body>
+
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/readings/sp1-5/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Sep 2026 10:48:25 GMT -->
+</html>
