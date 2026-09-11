@@ -1,33 +1,239 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/gan-based-anomaly-detection-for-multivariate-time-series-using-polluted-training-set-1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:17:56 GMT -->
+<!-- Added by HTTrack --><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="refresh" content="0; url=../../publications/gan-based-anomaly-detection-for-multivariate-time-series-using-polluted-training-set-1/index.html"/>
-    <title>Redirecting...</title>
+<meta charset="utf-8"/>
+<link crossorigin="anonymous" href="https://u.jimcdn.com/" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../assets.jimstatic.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="../../image.jimcdn.com/index.html" rel="dns-prefetch preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.jimstatic.com/" rel="dns-prefetch preconnect"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="index, follow, archive" name="robots"/>
+<meta content="" property="st:section"/>
+<meta content="Jimdo Creator" name="generator"/>
+<meta content="GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set" name="twitter:title"/>
+<meta content="B. Du, X. Sun, J. Ye, K. Cheng, J. Wang and L. Sun IEEE Transactions on Knowledge &amp;amp; Data Engineering (TKDE), 2021" name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index.html" property="og:url"/>
+<meta content="GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set" property="og:title"/>
+<meta content="B. Du, X. Sun, J. Ye, K. Cheng, J. Wang and L. Sun IEEE Transactions on Knowledge &amp;amp; Data Engineering (TKDE), 2021" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Beihang Interest Group on SmartCity (BIGSCity)" property="og:site_name"/><title>GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set - Beihang Interest Group on SmartCity (BIGSCity)</title>
+<link href="../../assets.jimstatic.com/s/img/favicon.ico" rel="shortcut icon"/>
+<link href="../../rss/blog" rel="alternate" title="Blog" type="application/rss+xml"/>
+<link href="index.html" rel="canonical"/>
+<style>html,body{margin:0}.hidden{display:none}.n{padding:5px}#emotion-header{position:relative}#emotion-header-logo,#emotion-header-title{position:absolute}</style>
+<link as="style" href="../../assets.jimstatic.com/web_oldtemplate.css.29a6006f9d7ed71da289.css" rel="preload"/>
+<noscript>
+</noscript>
+<link href="../../assets/css/web_oldtemplate.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/layout.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/><link href="../../assets/css/font.css" rel="stylesheet" type="text/css"/><script src="../../assets/js/config.js"></script><script src="../../assets/js/nav_toggle.js"></script>
+
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+        html, body {
+            margin: 0;
         }
-        .message {
-            font-size: 18px;
-            color: #333;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .hidden { display: none; }
+        .n { padding: 5px; }
+        #emotion-header { position: relative; }
+        #emotion-header-logo, #emotion-header-title { position: absolute; }
+
+        /* 全局强制无衬线字体栈 */
+        html, body, #cc-inner, #tp-container, #tp-content-wrapper, #content_area,
+        #content_area *, .j-module, .j-text, .headline, h1, h2, h3, p, div, span, a, strong, em {
+            font-family: Arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     </style>
 </head>
-<body>
-    <div class="message">
-        <p>This page has been moved.</p>
-        <p>Redirecting to <a href="../../publications/gan-based-anomaly-detection-for-multivariate-time-series-using-polluted-training-set-1/index.html">publications</a>...</p>
-        <p>If you are not redirected automatically, <a href="../../publications/gan-based-anomaly-detection-for-multivariate-time-series-using-polluted-training-set-1/index.html">click here</a>.</p>
-    </div>
+<body class="body cc-page cc-pagemode-default cc-content-parent" id="page-2234380912">
+<div class="cc-content-parent" id="cc-inner"> <div class="cc-content-parent" id="tp-container">
+<div id="tp-sidebar-wrapper">
+<div id="tp-emotion">
+<div data-action="emoHeader" id="emotion-header" style="background: #FFFFFF;width: 200px; height: 198px;">
+<a href="../../index.html" style="border: 0; text-decoration: none; cursor: pointer;">
+<img alt="" id="emotion-header-img" src="../u.jimcdn.com/cms/o/saf8fe3b8eb300165/emotion/crop/header4c79.png?t=1767243941"/>
+<strong id="emotion-header-title" style="             left: 0%;             top: 0%;             font: normal normal 0px/120% 'Lucida Grande', 'Lucida Sans Unicode',Geneva,Arial,Verdana,sans-serif;             color: #000000;                             display: none;                         "></strong>
+</a>
+</div>
+</div>
+<div id="tp-navigation-wrapper">
+<div data-container="navigation"><div class="j-nav-variant-standard">
+<ul id="mainNav1" class="mainNav1">
+<li id="cc-nav-view-1436096687"><a href="../../index.html" class="level_1"><span>Home</span></a></li>
+<li id="cc-nav-view-1436096787"><a href="../../jingyuan-wang/index.html" class="level_1"><span>Jingyuan Wang</span></a></li>
+<li id="cc-nav-view-2222426012"><a href="../../publications/index.html" class="level_1"><span>Publications</span></a></li>
+<li id="cc-nav-view-2221018512"><a href="../../students-alumni/index.html" class="level_1"><span>Students &amp; Alumni</span></a></li>
+<li id="cc-nav-view-2232851312"><a href="../../libcity/index.html" class="level_1"><span>LibCity</span></a></li>
+<li id="cc-nav-view-1436540387"><a href="../../visualizations/index.html" class="level_1"><span>Visualizations</span></a></li>
+<li id="cc-nav-view-2257750712"><a href="../../seminars/index.html" class="level_1"><span>Seminars</span></a></li>
+
+
+<li id="cc-nav-view-1436537587"><a href="../../readings/index.html" class="level_1"><span>Readings</span></a></li><li id="cc-nav-view-1436095287"><a href="../../contact-us/index.html" class="level_1"><span>Contact Us</span></a></li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="tp-sidebar">
+<div data-container="sidebar"><div id="cc-matrix-1765328887"><div class="j-module n j-htmlCode" id="cc-m-7369283887"></div><div class="j-module n j-hgrid" id="cc-m-11752886712"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3232397312"><div class="j-module n j-text" id="cc-m-11752886812"><p>
+    Current Visitors:
+</p></div></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3232397412"><div class="j-module n j-htmlCode" id="cc-m-11752887012"><!-- Statcounter code for Smartcity-buaa.org
+http://smartcity-buaa.org/ on Jimdo -->
+<noscript>
+</noscript> <!-- End of Statcounter Code --></div></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div></div></div>
+</div>
+</div>
+<div class="cc-content-parent" id="tp-content-wrapper">
+<div data-container="content" id="content_area"><div id="content_start"></div>
+<div id="cc-matrix-3319187412"><div class="j-module n j-header" id="cc-m-12206530712"><a name="12206530712"></a>
+<h1 class="" id="cc-m-header-12206530712">GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set</h1></div><div class="j-module n j-text" id="cc-m-12206530812"><p>
+<span lang="EN-US" style="font-size: 18px; font-family: 'Times New Roman', serif;" xml:lang="EN-US">B. Du, X. Sun, J. Ye, K. Cheng, <strong>J. Wang</strong> and L. Sun</span>
+</p>
+<p>
+<span lang="EN-US" style="font-size: 18px; font-family: 'Times New Roman', serif;" xml:lang="EN-US"><em>IEEE Transactions on Knowledge &amp; Data Engineering</em>
+<strong><em>(TKDE)</em></strong><span style="color: #333333; font-size: 16px; text-align: justify;">, <span style="font-size: 18px;">2021</span></span></span>
+</p></div><div class="j-module n j-hr" id="cc-m-12206530912"> <div class="hr"></div>
+</div><div class="j-module n j-hgrid" id="cc-m-12206531012"> <div class="cc-m-hgrid-column" style="width: 49%;">
+<div id="cc-matrix-3319187512"></div> </div>
+<div class="cc-m-hgrid-separator" data-display="cms-only"><div></div></div>
+<div class="cc-m-hgrid-column last" style="width: 49%;">
+<div id="cc-matrix-3319187612"></div> </div>
+<div class="cc-m-hgrid-overlay" data-display="cms-only"></div>
+<br class="cc-clear"/>
+</div><div class="j-module n j-textWithImage" id="cc-m-12206531112"><figure class="cc-imagewrapper cc-m-image-align-1">
+<img alt="" class="" data-image-id="8196654612" data-src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i02e3d557c8a2a9ae/version/1638876816/image.png" data-src-height="497" data-src-width="1145" id="cc-m-textwithimage-image-12206531112" sizes="(min-width: 375px) 375px, 100vw" src="../image.jimcdn.com/app/cms/image/transf/none/path/saf8fe3b8eb300165/image/i02e3d557c8a2a9ae/version/1638876816/image.png"/>
+</figure>
+<div>
+<div class="cc-m-textwithimage-inline-rte" data-action="text" data-name="text" id="cc-m-textwithimage-12206531112">
+<p style="text-align: justify;">
+<span style="font-size: 16px; text-align: justify;">Multivariate time series anomaly detection has great potentials in many practical applications such as structural health monitoring,
+    intelligent operation and maintenance, quantitative trading, etc. Extreme unbalanced training set and noise interference make it challenging to accurately capture the distribution of normal data
+    and then detect anomalies. Recently, dozens of AutoEncoder (AE) and Generative Adversarial Network (GAN) based methods have been proposed to learn the latent representation of normal data and
+    then detect anomalies based on reconstruction error. However, existing AE-based approaches are lack of effective regularization method specially designed for anomaly detection tasks thus easily
+    overfitting while GAN-based approaches are mostly trained under the hypothesis of pollution-free training set, which means the training set is all composed of normal samples and that is hard to
+    satisfy in practice. To tackle these problems, in this paper we propose a GAN based anomaly detection method for multivariate time series named FGANomaly (letter F is for Filter). The core idea
+    is to filter possible anomalous samples with pseudo-labels before training the discriminator thus to capture the distribution of normal data as precise as possible. In addition, we design a novel
+    training objective for the generator, which leads the generator to concentrate more on plausible normal data and ignore anomalies. We conducted comprehensive experiments on four public datasets,
+    and the experimental results show the superiority of our method over baselines in both performance and robustness.</span>
+</p> </div>
+</div>
+<div class="cc-clear"></div>
+</div><div class="j-module n j-hr" id="cc-m-12206531212"> <div class="hr"></div>
+</div><div class="j-module n j-downloadDocument" id="cc-m-12206531312"><div class="clearover">
+<div class="leftDownload">
+<a class="j-m-dowload" href="../../downloads/GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set.pdf"> <img alt="Download" class="downloadImage" height="51" src="../assets.jimstatic.com/s/img/cc/icons/pdf.png" width="51"/>
+</a>
+</div>
+<div class="rightDownload" data-name="download-description">
+<div class="cc-m-download-title">GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set</div>
+<div class="cc-m-download-file">
+<div class="cc-m-download-file-name">GAN-Based Anomaly Detection for Multivar</div>
+<div class="cc-m-download-file-info">
+<span class="cc-m-download-file-type">Adobe Acrobat Document</span>
+<span class="cc-m-download-file-size">6.9 MB</span>
+</div>
+<div class="cc-m-download-file-link"><a class="cc-m-download-link" href="../../downloads/GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</div><div class="j-module n j-hr" id="cc-m-12206531412"> <div class="hr"></div>
+</div><div class="j-module n j-text" id="cc-m-12206531512"><p>
+    @article{du2021gan,
+</p>
+<p>
+      title={GAN-Based Anomaly Detection for Multivariate Time Series Using Polluted Training Set},
+</p>
+<p>
+      author={Du, Bowen and Sun, Xuanxuan and Ye, Junchen and Cheng, Ke and Wang, Jingyuan and Sun, Leilei},
+</p>
+<p>
+      journal={IEEE Transactions on Knowledge and Data Engineering},
+</p>
+<p>
+      year={2021},
+</p>
+<p>
+      publisher={IEEE}
+</p>
+<p>
+    }
+</p></div></div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="tp-footer">
+<div data-container="footer" id="contentfooter">
+<div class="leftrow">
+</div>
+<div class="rightrow">
+<span class="loggedout">
+<a href="https://cms.e.jimdo.com/app/oidc/authenticate?websiteId=saf8fe3b8eb300165" id="login" rel="nofollow">Log in</a>
+</span>
+<span class="loggedin">
+<a href="https://cms.e.jimdo.com/app/cms/logout.php" id="logout" rel="nofollow" target="_top">
+        Log out    </a>
+    |
+    <a href="https://a.jimdo.com/app/auth/signin/jumpcms/?page=2234380912" id="edit" rel="nofollow" target="_top">Edit</a>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<ul class="cc-FloatingButtonBarContainer cc-FloatingButtonBarContainer-right hidden">
+<!-- scroll to top button -->
+<li class="cc-FloatingButtonBarContainer-button-scroll">
+<a href="javascript:void(0);" title="Scroll to top">
+<span>Scroll to top</span>
+</a>
+</li>
+</ul>
+<div class="hidden" id="loginbox">
+<div id="loginbox-header">
+<a class="cc-close" href="#" title="Close this element">Close</a>
+<div class="c"></div>
+</div>
+<div id="loginbox-content">
+<div id="resendpw"></div>
+<div id="loginboxOuter"></div>
+</div>
+</div>
+<div class="hidden" id="loginbox-darklayer"></div>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WDBL3P" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var imgs = document.querySelectorAll('img');
+    imgs.forEach(function(img) {
+        img.addEventListener('error', function() {
+            var src = this.getAttribute('src');
+            if (src && !this.dataset.fallbackTried) {
+                this.dataset.fallbackTried = "true";
+                // Match domain and append https://
+                var match = src.match(/(image\.jimcdn\.com|u\.jimcdn\.com|assets\.jimstatic\.com)\/.*$/);
+                if (match) {
+                    this.src = 'https://' + match[0];
+                }
+            }
+        });
+    });
+});
+</script>
+
+
+
 </body>
+<!-- Mirrored from smartcity-buaa.jimdoweb.com/publications/gan-based-anomaly-detection-for-multivariate-time-series-using-polluted-training-set-1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 09:17:57 GMT -->
 </html>
